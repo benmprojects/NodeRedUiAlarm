@@ -1,15 +1,15 @@
 [
     {
-        "id": "29b64849.38ee38",
+        "id": "8488c4ce.382e68",
         "type": "tab",
         "label": "Alarm Panel",
         "disabled": false,
         "info": ""
     },
     {
-        "id": "c8549b10.b96a98",
+        "id": "6f283f33.613628",
         "type": "join",
-        "z": "29b64849.38ee38",
+        "z": "8488c4ce.382e68",
         "name": "",
         "mode": "custom",
         "build": "string",
@@ -27,18 +27,18 @@
         "reduceInitType": "num",
         "reduceFixup": "",
         "x": 1370,
-        "y": 580,
+        "y": 624,
         "wires": [
             [
-                "f19f3729.8b8c38"
+                "92a5953d.b9f2f8"
             ]
         ]
     },
     {
-        "id": "cefd9928.3ac298",
+        "id": "b1e882eb.8ec86",
         "type": "ui_template",
-        "z": "29b64849.38ee38",
-        "group": "3d1871c9.a6bf6e",
+        "z": "8488c4ce.382e68",
+        "group": "815f23e1.e0556",
         "name": "Show Alarm Status Image",
         "order": 1,
         "width": "8",
@@ -48,17 +48,17 @@
         "fwdInMessages": false,
         "templateScope": "local",
         "x": 1030,
-        "y": 140,
+        "y": 139,
         "wires": [
             []
         ]
     },
     {
-        "id": "f341a14.2b0276",
+        "id": "99fd1b83.237438",
         "type": "server-state-changed",
-        "z": "29b64849.38ee38",
+        "z": "8488c4ce.382e68",
         "name": "Alarm Panel",
-        "server": "ae6b7c22.70fac",
+        "server": "7ef0ac76.c23934",
         "entityidfilter": "alarm_control_panel.house",
         "entityidfiltertype": "exact",
         "outputinitially": false,
@@ -69,35 +69,35 @@
         "outputs": 1,
         "output_only_on_state_change": true,
         "x": 573,
-        "y": 280,
+        "y": 279,
         "wires": [
             [
-                "8eacb699.8fb4c8",
-                "86617cd6.16e3a",
-                "d4fa1f5f.26a79"
+                "525db5ed.09c434",
+                "b3c89643.78865",
+                "9f9fff32.5e3db"
             ]
         ]
     },
     {
-        "id": "a6dfecce.853e3",
+        "id": "6ba3b0dd.bc15a",
         "type": "ui_text",
-        "z": "29b64849.38ee38",
-        "group": "3d1871c9.a6bf6e",
+        "z": "8488c4ce.382e68",
+        "group": "815f23e1.e0556",
         "order": 2,
-        "width": "6",
+        "width": "8",
         "height": "1",
         "name": "Alarm Status:",
         "label": "Status:",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "x": 1210,
-        "y": 280,
+        "y": 279,
         "wires": []
     },
     {
-        "id": "64fc0b9a.ca5724",
+        "id": "10a23b32.a06b9d",
         "type": "change",
-        "z": "29b64849.38ee38",
+        "z": "8488c4ce.382e68",
         "name": "\"armed home\"",
         "rules": [
             {
@@ -116,17 +116,17 @@
         "to": "",
         "reg": false,
         "x": 980,
-        "y": 200,
+        "y": 199,
         "wires": [
             [
-                "a6dfecce.853e3"
+                "6ba3b0dd.bc15a"
             ]
         ]
     },
     {
-        "id": "8eacb699.8fb4c8",
+        "id": "525db5ed.09c434",
         "type": "switch",
-        "z": "29b64849.38ee38",
+        "z": "8488c4ce.382e68",
         "name": "",
         "property": "payload",
         "propertyType": "msg",
@@ -161,29 +161,29 @@
         "repair": false,
         "outputs": 5,
         "x": 790,
-        "y": 280,
+        "y": 279,
         "wires": [
             [
-                "64fc0b9a.ca5724"
+                "10a23b32.a06b9d"
             ],
             [
-                "372205bb.ae795a"
+                "accc33b0.f7045"
             ],
             [
-                "85ee6879.3b20b8"
+                "6c39bdd8.eae124"
             ],
             [
-                "ce8412f8.c1c8e"
+                "b84a091d.f39b1"
             ],
             [
-                "39a5f029.48ead"
+                "6556efbb.d02378"
             ]
         ]
     },
     {
-        "id": "372205bb.ae795a",
+        "id": "accc33b0.f7045",
         "type": "change",
-        "z": "29b64849.38ee38",
+        "z": "8488c4ce.382e68",
         "name": "\"armed away\"",
         "rules": [
             {
@@ -202,17 +202,17 @@
         "to": "",
         "reg": false,
         "x": 980,
-        "y": 240,
+        "y": 239,
         "wires": [
             [
-                "a6dfecce.853e3"
+                "6ba3b0dd.bc15a"
             ]
         ]
     },
     {
-        "id": "85ee6879.3b20b8",
+        "id": "6c39bdd8.eae124",
         "type": "change",
-        "z": "29b64849.38ee38",
+        "z": "8488c4ce.382e68",
         "name": "\"triggered\"",
         "rules": [
             {
@@ -231,17 +231,17 @@
         "to": "",
         "reg": false,
         "x": 970,
-        "y": 280,
+        "y": 279,
         "wires": [
             [
-                "a6dfecce.853e3"
+                "6ba3b0dd.bc15a"
             ]
         ]
     },
     {
-        "id": "ce8412f8.c1c8e",
+        "id": "b84a091d.f39b1",
         "type": "change",
-        "z": "29b64849.38ee38",
+        "z": "8488c4ce.382e68",
         "name": "\"disarmed\"",
         "rules": [
             {
@@ -260,17 +260,17 @@
         "to": "",
         "reg": false,
         "x": 970,
-        "y": 320,
+        "y": 319,
         "wires": [
             [
-                "a6dfecce.853e3"
+                "6ba3b0dd.bc15a"
             ]
         ]
     },
     {
-        "id": "ca5c7d02.a1e78",
+        "id": "406cac4a.819abc",
         "type": "function",
-        "z": "29b64849.38ee38",
+        "z": "8488c4ce.382e68",
         "name": "Hide Button on State",
         "func": "msgs_home = {}\nif (msg.payload === \"armed_home\") { msgs_home.color = \"white\"; msgs_home.background = \"white\"; msgs_home.enabled = false; }\nelse if (msg.payload === \"armed_away\") { msgs_home.color = \"white\"; msgs_home.background = \"white\"; msgs_home.enabled = false; }\nelse if (msg.payload === \"triggered\") { msgs_home.color = \"white\"; msgs_home.background = \"white\"; msgs_home.enabled = false;  }\nelse if (msg.payload === \"pending\") { msgs_home.color = \"white\"; msgs_home.background = \"white\"; msgs_home.enabled = false; }\nelse if (msg.payload === \"disarmed\") { msgs_home.color = \"\"; msgs_home.background = \"\"; msgs_home.enabled = true; }\nif (msg.locked === \"locked\") { msgs_home.enabled = false; }\n\nmsgs_away = {}\nif (msg.payload === \"armed_home\") { msgs_away.color = \"white\"; msgs_away.background = \"white\"; msgs_away.enabled = false; }\nelse if (msg.payload === \"armed_away\") { msgs_away.color = \"white\"; msgs_away.background = \"white\"; msgs_away.enabled = false; }\nelse if (msg.payload === \"triggered\") { msgs_away.color = \"white\"; msgs_away.background = \"white\"; msgs_away.enabled = false;  }\nelse if (msg.payload === \"pending\") { msgs_home.color = \"white\"; msgs_away.background = \"white\"; msgs_home.enabled = false; }\nelse if (msg.payload === \"disarmed\") { msgs_away.color = \"\"; msgs_away.background = \"\"; msgs_away.enabled = true; }\nif (msg.locked === \"locked\") { msgs_away.enabled = false; }\n\nmsgs_disarmed = {}\nif (msg.payload === \"armed_home\") { msgs_disarmed.color = \"\"; msgs_disarmed.background = \"\"; msgs_disarmed.enabled = true; }\nelse if (msg.payload === \"armed_away\") { msgs_disarmed.color = \"\"; msgs_disarmed.background = \"\"; msgs_disarmed.enabled = true; }\nelse if (msg.payload === \"triggered\") { msgs_disarmed.color = \"\"; msgs_disarmed.background = \"\"; msgs_disarmed.enabled = true; }\nelse if (msg.payload === \"pending\") { msgs_disarmed.color = \"\"; msgs_disarmed.background = \"\"; msgs_disarmed.enabled = true; }\nelse if (msg.payload === \"disarmed\") { msgs_disarmed.color = \"white\"; msgs_disarmed.background = \"white\"; msgs_disarmed.enabled = false; }\nif (msg.locked === \"locked\") { msgs_disarmed.enabled = false; }\n\nmsgs_panel_locked = {}\nif (msg.locked === \"locked\") { msgs_panel_locked.enabled = false; }\nelse if (msg.locked === \"unlocked\") { msgs_panel_locked.enabled = true; }\nelse if (msg.payload === \"armed_home\") { msgs_panel_locked.enabled = true; }\nelse if (msg.payload === \"armed_away\") { msgs_panel_locked.enabled = true; }\nelse if (msg.payload === \"triggered\") { msgs_panel_locked.enabled = true; }\nelse if (msg.payload === \"pending\") { msgs_panel_locked.enabled = true; }\nelse if (msg.payload === \"disarmed\") { msgs_panel_locked.enabled = true; }\n\nreturn [ msgs_home, msgs_away, msgs_disarmed, msgs_panel_locked ];",
         "outputs": 4,
@@ -279,35 +279,35 @@
         "y": 680,
         "wires": [
             [
-                "3b5a7e75.cff952"
+                "aaedd5de.2acb3"
             ],
             [
-                "924af522.96b5e8"
+                "6032f114.fb0ec8"
             ],
             [
-                "c9847913.f71998"
+                "cf55acd.5a4c35"
             ],
             [
-                "f52f75a3.a25778",
-                "6de12be6.f522b4",
-                "5e86342c.17198c",
-                "5ef79c4d.f9cc24",
-                "cbc2a797.9a5d08",
-                "7f75726.7c5548c",
-                "14f5ffb2.6bdc3",
-                "cad055b3.db18e8",
-                "879ddab3.e8a148",
-                "4022581b.9fc0d8",
-                "39dbddfd.8e9d52",
-                "38040a84.c36316",
-                "69babe94.0e609"
+                "7b322026.861608",
+                "4d75a773.630648",
+                "fb595c9d.114218",
+                "bb4c86c8.f8701",
+                "ec0570e4.15519",
+                "949d2a8e.d810c",
+                "3a452f67.1671f8",
+                "e84afff7.f96bf",
+                "3e3dd1f0.cc604e",
+                "50407676.35b3c8",
+                "192b6e6d.60bc5a",
+                "117e4a77.0773a6",
+                "50ff2da6.32afa4"
             ]
         ]
     },
     {
-        "id": "b1db8f6a.55ea",
+        "id": "f7818028.38ca1",
         "type": "inject",
-        "z": "29b64849.38ee38",
+        "z": "8488c4ce.382e68",
         "name": "Manual Inject",
         "topic": "",
         "payload": "",
@@ -317,19 +317,19 @@
         "once": true,
         "onceDelay": "15",
         "x": 390,
-        "y": 404,
+        "y": 403,
         "wires": [
             [
-                "d4fa1f5f.26a79"
+                "9f9fff32.5e3db"
             ]
         ]
     },
     {
-        "id": "d4fa1f5f.26a79",
+        "id": "9f9fff32.5e3db",
         "type": "api-current-state",
-        "z": "29b64849.38ee38",
+        "z": "8488c4ce.382e68",
         "name": "Alarm State",
-        "server": "ae6b7c22.70fac",
+        "server": "7ef0ac76.c23934",
         "outputs": 1,
         "halt_if": "",
         "halt_if_type": "str",
@@ -342,19 +342,19 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 575,
-        "y": 364,
+        "y": 363,
         "wires": [
             [
-                "8eacb699.8fb4c8",
-                "ca5c7d02.a1e78",
-                "86617cd6.16e3a"
+                "525db5ed.09c434",
+                "406cac4a.819abc",
+                "b3c89643.78865"
             ]
         ]
     },
     {
-        "id": "f19f3729.8b8c38",
+        "id": "92a5953d.b9f2f8",
         "type": "join",
-        "z": "29b64849.38ee38",
+        "z": "8488c4ce.382e68",
         "name": "",
         "mode": "custom",
         "build": "array",
@@ -372,30 +372,30 @@
         "reduceInitType": "",
         "reduceFixup": "",
         "x": 1530,
-        "y": 580,
+        "y": 624,
         "wires": [
             [
-                "ab85d24a.aba7"
+                "a039235f.0a8ce8"
             ]
         ]
     },
     {
-        "id": "b47c6722.7e3f48",
+        "id": "7b04dd60.b115d4",
         "type": "mqtt out",
-        "z": "29b64849.38ee38",
+        "z": "8488c4ce.382e68",
         "name": "",
         "topic": "home/alarm/set",
         "qos": "",
         "retain": "",
-        "broker": "56eb5a09.1f0884",
-        "x": 1929,
-        "y": 520,
+        "broker": "1c2a2feb.1246b",
+        "x": 1940,
+        "y": 560,
         "wires": []
     },
     {
-        "id": "9098c3ab.66ca3",
+        "id": "453b4701.e9d6e8",
         "type": "change",
-        "z": "29b64849.38ee38",
+        "z": "8488c4ce.382e68",
         "name": "Change Payload",
         "rules": [
             {
@@ -412,17 +412,17 @@
         "to": "",
         "reg": false,
         "x": 1749,
-        "y": 520,
+        "y": 564,
         "wires": [
             [
-                "b47c6722.7e3f48"
+                "7b04dd60.b115d4"
             ]
         ]
     },
     {
-        "id": "f52f75a3.a25778",
+        "id": "7b322026.861608",
         "type": "switch",
-        "z": "29b64849.38ee38",
+        "z": "8488c4ce.382e68",
         "name": "",
         "property": "enabled",
         "propertyType": "msg",
@@ -438,20 +438,20 @@
         "repair": false,
         "outputs": 2,
         "x": 690,
-        "y": 1040,
+        "y": 1084,
         "wires": [
             [
-                "b54b63a2.44833"
+                "b5c4f1ce.8ad88"
             ],
             [
-                "964261e0.d6e92"
+                "9ad9428a.a60ab8"
             ]
         ]
     },
     {
-        "id": "b54b63a2.44833",
+        "id": "b5c4f1ce.8ad88",
         "type": "change",
-        "z": "29b64849.38ee38",
+        "z": "8488c4ce.382e68",
         "name": "Locked",
         "rules": [
             {
@@ -468,17 +468,17 @@
         "to": "",
         "reg": false,
         "x": 860,
-        "y": 1020,
+        "y": 1064,
         "wires": [
             [
-                "472a7a78.8392a4"
+                "5137153f.068d0c"
             ]
         ]
     },
     {
-        "id": "c9847913.f71998",
+        "id": "cf55acd.5a4c35",
         "type": "delay",
-        "z": "29b64849.38ee38",
+        "z": "8488c4ce.382e68",
         "name": "",
         "pauseType": "delay",
         "timeout": "500",
@@ -491,72 +491,75 @@
         "randomUnits": "seconds",
         "drop": false,
         "x": 770,
-        "y": 920,
+        "y": 964,
         "wires": [
             [
-                "b24c5637.06c738"
+                "c8bd030c.ad5a"
             ]
         ]
     },
     {
-        "id": "472a7a78.8392a4",
+        "id": "5137153f.068d0c",
         "type": "ui_text",
-        "z": "29b64849.38ee38",
-        "group": "3d1871c9.a6bf6e",
-        "order": 2,
-        "width": "6",
+        "z": "8488c4ce.382e68",
+        "group": "815f23e1.e0556",
+        "order": 3,
+        "width": "8",
         "height": "1",
         "name": "Panel Status",
         "label": "Panel:",
         "format": "{{msg.enabled}}",
         "layout": "row-spread",
         "x": 1030,
-        "y": 1060,
+        "y": 1104,
         "wires": []
     },
     {
-        "id": "ab85d24a.aba7",
+        "id": "a039235f.0a8ce8",
         "type": "function",
-        "z": "29b64849.38ee38",
+        "z": "8488c4ce.382e68",
         "name": "Check Pin Code",
-        "func": "// variables\nvar msgs = {};\nvar codes = [];\nvar key_input = msg.payload[0];\nvar msg_error = \"\";\nvar key_check = {};\nvar usercode = [];\n\nlogging = {};\nlogging.payload = {};\n\n// get global variables from config file\nconf_usercount = global.get(\"usercount\");\nconf_codes = global.get(\"codes\");\nconf_name = global.get(\"name\");\nconf_picture = global.get(\"picture\");\ncounter = global.get(\"Counter\") \nmaxretries = global.get(\"MaxRetries\")\n\n\n// timestamp\nvar today = new Date();\nvar timeAsString = today.toLocaleTimeString();\nvar dd = today.getDate();\nvar mm = today.getMonth() + 1; //January is 0!\n\nvar yyyy = today.getFullYear();\nif (dd < 10) {\n  dd = '0' + dd;\n} \nif (mm < 10) {\n  mm = '0' + mm;\n} \nvar today1 = dd + '.' + mm + '.' + yyyy;\n\n// check input code with codes form config file\nkey_check = conf_codes.includes(key_input)\nif (key_check === true) { \n    msg_error = 0;\n    \n    //logging\n    for ( var i = 0; i < conf_codes.length; i++) {\n        if ( conf_codes[i] === key_input ) { usercode = i }\n    }\n    logging.payload.today = today1\n    logging.payload.time = timeAsString;\n    logging.payload.user = conf_name[usercode];\n    logging.payload.state = msg.payload[1]\n    node.send([null,null,logging])\n    \n}\nif (key_check === false){ msg_error = 1;}\n\n// check failed counter or reset to 0    \nif (msg_error === 1 ) {counter += 1; global.set(\"Counter\",counter);}\nif (msg_error === 0 ) {counter = 0; global.set(\"Counter\",counter);}\nmsgs.counter = counter\n\n// initiate lock state\nif ( counter >= maxretries ) { msgs.locked = \"locked\";} \nif ( counter <= maxretries ) { msgs.locked = \"unlocked\";}\n\n \n\n\nif ( msgs.locked === \"locked\") { return [ null, msgs, null]; }\nif ( key_check === true ) { return [ msg, null, null]; }\nelse return [ null, null, msgs]; \n\n",
-        "outputs": 3,
+        "func": "// variables\nvar msgs = {};\nvar codes = [];\nvar key_input = msg.payload[0];\nvar msg_error = \"\";\nvar key_check = {};\nvar usercode = [];\n\nlogging = {};\nlogging.payload = {};\n\n// get global variables from config file\nconf_usercount = global.get(\"usercount\");\nconf_codes = global.get(\"codes\");\nconf_name = global.get(\"name\");\nconf_picture = global.get(\"picture\");\ncounter = global.get(\"Counter\") \nmaxretries = global.get(\"MaxRetries\")\n\n\n// timestamp\nvar today = new Date();\nvar timeAsString = today.toLocaleTimeString();\nvar dd = today.getDate();\nvar mm = today.getMonth() + 1; //January is 0!\n\nvar yyyy = today.getFullYear();\nif (dd < 10) {\n  dd = '0' + dd;\n} \nif (mm < 10) {\n  mm = '0' + mm;\n} \nvar today1 = dd + '.' + mm + '.' + yyyy;\n\n// check input code with codes form config file\nkey_check = conf_codes.includes(key_input)\nif (key_check === true) { \n    msg_error = 0;\n    \n    //logging\n    for ( var i = 0; i < conf_codes.length; i++) {\n        if ( conf_codes[i] === key_input ) { usercode = i }\n    }\n    logging.payload.today = today1\n    logging.payload.time = timeAsString;\n    logging.payload.user = conf_name[usercode];\n    logging.payload.state = msg.payload[1]\n    node.send([null,null,logging])\n    \n}\nif (key_check === false){ msg_error = 1;}\nif (key_check === false){ msgs.pin = \"Wrong PIN\";}\n\n// check failed counter or reset to 0    \nif (msg_error === 1 ) {counter += 1; global.set(\"Counter\",counter);}\nif (msg_error === 0 ) {counter = 0; global.set(\"Counter\",counter);}\nmsgs.counter = counter\n\n// initiate lock state\nif ( counter >= maxretries ) { msgs.locked = \"locked\";} \nif ( counter <= maxretries ) { msgs.locked = \"unlocked\";}\n\n \n\n\nif ( msgs.locked === \"locked\") { return [ null, msgs, null, null]; }\nif ( key_check === true ) { return [ msg, null, null, null]; }\nif ( key_check === false ) { return [ null, null, null, msgs]; }\nelse return [ null, null, msgs, null]; \n\n",
+        "outputs": 4,
         "noerr": 0,
         "x": 1689,
-        "y": 580,
+        "y": 624,
         "wires": [
             [
-                "9098c3ab.66ca3"
+                "453b4701.e9d6e8"
             ],
             [
-                "66fb9e39.ce3ba",
-                "bb4eee13.8366"
+                "5e3ae2e8.b145bc",
+                "66ab173e.bef97"
             ],
             [
-                "842707b.536bff8"
+                "ed03ef10.94a508"
+            ],
+            [
+                "f090143b.ab0a6"
             ]
         ]
     },
     {
-        "id": "86617cd6.16e3a",
+        "id": "b3c89643.78865",
         "type": "function",
-        "z": "29b64849.38ee38",
+        "z": "8488c4ce.382e68",
         "name": "set state image",
         "func": "imagepath = global.get(\"Imagepath\"); \n\nif (msg.payload === \"armed_home\") { msg.payload = '<img class=\"marginauto\" src=\"' + imagepath + 'armed_home.png\">'; }\nelse if (msg.payload === \"armed_away\") { msg.payload = '<img class=\"marginauto\" src=\"' + imagepath + 'armed_away.png\">'; }\nelse if (msg.payload === \"triggered\") { msg.payload = '<img class=\"blink-image\" src=\"' + imagepath + 'alarm_triggered.png\">';  }\nelse if (msg.payload === \"pending\") { msg.payload = '<img class=\"blink-image\" src=\"' + imagepath + 'pending.png\">'; }\nelse if (msg.payload === \"disarmed\") { msg.payload = '<img class=\"marginauto\" src=\"' + imagepath + 'unarmed.png\">'; }\nelse if (msg.locked === \"locked\") { msg.payload = '<img class=\"marginauto\" src=\"' + imagepath + 'locked_out.png\">'; }\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "x": 820,
-        "y": 140,
+        "y": 139,
         "wires": [
             [
-                "cefd9928.3ac298"
+                "b1e882eb.8ec86"
             ]
         ]
     },
     {
-        "id": "39a5f029.48ead",
+        "id": "6556efbb.d02378",
         "type": "change",
-        "z": "29b64849.38ee38",
+        "z": "8488c4ce.382e68",
         "name": "\"pending\"",
         "rules": [
             {
@@ -575,17 +578,17 @@
         "to": "",
         "reg": false,
         "x": 960,
-        "y": 360,
+        "y": 359,
         "wires": [
             [
-                "a6dfecce.853e3"
+                "6ba3b0dd.bc15a"
             ]
         ]
     },
     {
-        "id": "6ee643a2.d63b1c",
+        "id": "94edcbc3.c46c98",
         "type": "comment",
-        "z": "29b64849.38ee38",
+        "z": "8488c4ce.382e68",
         "name": "Change this to your alarm_control_panel entity name and server ip => ",
         "info": "",
         "x": 291,
@@ -593,9 +596,9 @@
         "wires": []
     },
     {
-        "id": "89284c0.99a68b8",
+        "id": "11d00c96.10b7d3",
         "type": "comment",
-        "z": "29b64849.38ee38",
+        "z": "8488c4ce.382e68",
         "name": "Change this to your alarm_control_panel entity name => ",
         "info": "",
         "x": 240,
@@ -603,9 +606,9 @@
         "wires": []
     },
     {
-        "id": "964261e0.d6e92",
+        "id": "9ad9428a.a60ab8",
         "type": "change",
-        "z": "29b64849.38ee38",
+        "z": "8488c4ce.382e68",
         "name": "Active",
         "rules": [
             {
@@ -622,18 +625,18 @@
         "to": "",
         "reg": false,
         "x": 870,
-        "y": 1060,
+        "y": 1104,
         "wires": [
             [
-                "472a7a78.8392a4"
+                "5137153f.068d0c"
             ]
         ]
     },
     {
-        "id": "6de12be6.f522b4",
+        "id": "4d75a773.630648",
         "type": "ui_template",
-        "z": "29b64849.38ee38",
-        "group": "f48396ab.6b4118",
+        "z": "8488c4ce.382e68",
+        "group": "7e298e0d.985158",
         "name": "1",
         "order": 1,
         "width": "2",
@@ -643,37 +646,18 @@
         "fwdInMessages": false,
         "templateScope": "local",
         "x": 950,
-        "y": 400,
+        "y": 444,
         "wires": [
             [
-                "c8549b10.b96a98"
+                "6f283f33.613628"
             ]
         ]
     },
     {
-        "id": "26ddf5bb.d6a6ea",
+        "id": "fb595c9d.114218",
         "type": "ui_template",
-        "z": "29b64849.38ee38",
-        "group": "f48396ab.6b4118",
-        "name": "stuff",
-        "order": 16,
-        "width": "0",
-        "height": "0",
-        "format": "<style>\n  .filled { \n      height: 100% !important;\n\n      padding: 0 !important;\n      margin: 0 !important;\n  }\n  .nr-dashboard-template {\n      padding: 0;\n      margin: 0;\n  }\n  \n  .rounded {\n  border-radius: 20px 20px 20px 20px;\n}\n \n   .bigfont {\n  font-size: 18px;\n}\n\n   .smallfont {\n  font-size: 14px;\n}\n\n   .littlefont {\n  font-size: 10px;\n}\n\n  #masonry-container {\n      background: white;\n  }\n  \n  \n  .masonry-container {\n      margin-top: 40px!Important;\n  }\n  \n  }\n</style>\n\n<script>\n$('.vibrate').on('click', function() {\n  navigator.vibrate(100);\n});\n\nfunction restore_bg(x) {\n            $(this).css(\"background-color\", x);\n    };\n\n$('.touched').on('mousedown', function() {\n    \n    var x= $(this).css(\"background-color\");\n    $(this).css(\"background-color\", \"#33ccff\");\n    \n    setTimeout(restore_bg.bind(this,x),100);\n    navigator.vibrate(80);\n    });\n    \n</script>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "templateScope": "local",
-        "x": 1590,
-        "y": 104,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "5e86342c.17198c",
-        "type": "ui_template",
-        "z": "29b64849.38ee38",
-        "group": "f48396ab.6b4118",
+        "z": "8488c4ce.382e68",
+        "group": "7e298e0d.985158",
         "name": "2",
         "order": 2,
         "width": "2",
@@ -683,18 +667,18 @@
         "fwdInMessages": false,
         "templateScope": "local",
         "x": 950,
-        "y": 440,
+        "y": 484,
         "wires": [
             [
-                "c8549b10.b96a98"
+                "6f283f33.613628"
             ]
         ]
     },
     {
-        "id": "5ef79c4d.f9cc24",
+        "id": "bb4c86c8.f8701",
         "type": "ui_template",
-        "z": "29b64849.38ee38",
-        "group": "f48396ab.6b4118",
+        "z": "8488c4ce.382e68",
+        "group": "7e298e0d.985158",
         "name": "3",
         "order": 3,
         "width": "2",
@@ -704,18 +688,18 @@
         "fwdInMessages": false,
         "templateScope": "local",
         "x": 950,
-        "y": 480,
+        "y": 524,
         "wires": [
             [
-                "c8549b10.b96a98"
+                "6f283f33.613628"
             ]
         ]
     },
     {
-        "id": "cbc2a797.9a5d08",
+        "id": "ec0570e4.15519",
         "type": "ui_template",
-        "z": "29b64849.38ee38",
-        "group": "f48396ab.6b4118",
+        "z": "8488c4ce.382e68",
+        "group": "7e298e0d.985158",
         "name": "4",
         "order": 5,
         "width": "2",
@@ -725,18 +709,18 @@
         "fwdInMessages": false,
         "templateScope": "local",
         "x": 950,
-        "y": 520,
+        "y": 564,
         "wires": [
             [
-                "c8549b10.b96a98"
+                "6f283f33.613628"
             ]
         ]
     },
     {
-        "id": "7f75726.7c5548c",
+        "id": "949d2a8e.d810c",
         "type": "ui_template",
-        "z": "29b64849.38ee38",
-        "group": "f48396ab.6b4118",
+        "z": "8488c4ce.382e68",
+        "group": "7e298e0d.985158",
         "name": "5",
         "order": 6,
         "width": "2",
@@ -746,18 +730,18 @@
         "fwdInMessages": false,
         "templateScope": "local",
         "x": 950,
-        "y": 560,
+        "y": 604,
         "wires": [
             [
-                "c8549b10.b96a98"
+                "6f283f33.613628"
             ]
         ]
     },
     {
-        "id": "14f5ffb2.6bdc3",
+        "id": "3a452f67.1671f8",
         "type": "ui_template",
-        "z": "29b64849.38ee38",
-        "group": "f48396ab.6b4118",
+        "z": "8488c4ce.382e68",
+        "group": "7e298e0d.985158",
         "name": "6",
         "order": 7,
         "width": "2",
@@ -767,18 +751,18 @@
         "fwdInMessages": false,
         "templateScope": "local",
         "x": 950,
-        "y": 600,
+        "y": 644,
         "wires": [
             [
-                "c8549b10.b96a98"
+                "6f283f33.613628"
             ]
         ]
     },
     {
-        "id": "cad055b3.db18e8",
+        "id": "e84afff7.f96bf",
         "type": "ui_template",
-        "z": "29b64849.38ee38",
-        "group": "f48396ab.6b4118",
+        "z": "8488c4ce.382e68",
+        "group": "7e298e0d.985158",
         "name": "7",
         "order": 9,
         "width": "2",
@@ -788,18 +772,18 @@
         "fwdInMessages": false,
         "templateScope": "local",
         "x": 950,
-        "y": 640,
+        "y": 684,
         "wires": [
             [
-                "c8549b10.b96a98"
+                "6f283f33.613628"
             ]
         ]
     },
     {
-        "id": "879ddab3.e8a148",
+        "id": "3e3dd1f0.cc604e",
         "type": "ui_template",
-        "z": "29b64849.38ee38",
-        "group": "f48396ab.6b4118",
+        "z": "8488c4ce.382e68",
+        "group": "7e298e0d.985158",
         "name": "8",
         "order": 10,
         "width": "2",
@@ -809,18 +793,18 @@
         "fwdInMessages": false,
         "templateScope": "local",
         "x": 950,
-        "y": 680,
+        "y": 724,
         "wires": [
             [
-                "c8549b10.b96a98"
+                "6f283f33.613628"
             ]
         ]
     },
     {
-        "id": "4022581b.9fc0d8",
+        "id": "50407676.35b3c8",
         "type": "ui_template",
-        "z": "29b64849.38ee38",
-        "group": "f48396ab.6b4118",
+        "z": "8488c4ce.382e68",
+        "group": "7e298e0d.985158",
         "name": "9",
         "order": 11,
         "width": "2",
@@ -830,18 +814,18 @@
         "fwdInMessages": false,
         "templateScope": "local",
         "x": 950,
-        "y": 720,
+        "y": 764,
         "wires": [
             [
-                "c8549b10.b96a98"
+                "6f283f33.613628"
             ]
         ]
     },
     {
-        "id": "39dbddfd.8e9d52",
+        "id": "192b6e6d.60bc5a",
         "type": "ui_template",
-        "z": "29b64849.38ee38",
-        "group": "f48396ab.6b4118",
+        "z": "8488c4ce.382e68",
+        "group": "7e298e0d.985158",
         "name": "*",
         "order": 13,
         "width": "2",
@@ -851,18 +835,18 @@
         "fwdInMessages": false,
         "templateScope": "local",
         "x": 950,
-        "y": 760,
+        "y": 804,
         "wires": [
             [
-                "c8549b10.b96a98"
+                "6f283f33.613628"
             ]
         ]
     },
     {
-        "id": "38040a84.c36316",
+        "id": "117e4a77.0773a6",
         "type": "ui_template",
-        "z": "29b64849.38ee38",
-        "group": "f48396ab.6b4118",
+        "z": "8488c4ce.382e68",
+        "group": "7e298e0d.985158",
         "name": "0",
         "order": 14,
         "width": "2",
@@ -872,18 +856,18 @@
         "fwdInMessages": false,
         "templateScope": "local",
         "x": 950,
-        "y": 800,
+        "y": 844,
         "wires": [
             [
-                "c8549b10.b96a98"
+                "6f283f33.613628"
             ]
         ]
     },
     {
-        "id": "3b5a7e75.cff952",
+        "id": "aaedd5de.2acb3",
         "type": "ui_template",
-        "z": "29b64849.38ee38",
-        "group": "f48396ab.6b4118",
+        "z": "8488c4ce.382e68",
+        "group": "7e298e0d.985158",
         "name": "Home",
         "order": 4,
         "width": "2",
@@ -893,19 +877,19 @@
         "fwdInMessages": false,
         "templateScope": "local",
         "x": 950,
-        "y": 840,
+        "y": 884,
         "wires": [
             [
-                "3fb547c9.47cfc8",
-                "ee22a170.6cc3a"
+                "65173114.eb6978",
+                "3d3b375.cd8cdc8"
             ]
         ]
     },
     {
-        "id": "924af522.96b5e8",
+        "id": "6032f114.fb0ec8",
         "type": "ui_template",
-        "z": "29b64849.38ee38",
-        "group": "f48396ab.6b4118",
+        "z": "8488c4ce.382e68",
+        "group": "7e298e0d.985158",
         "name": "Away",
         "order": 8,
         "width": "2",
@@ -915,19 +899,19 @@
         "fwdInMessages": false,
         "templateScope": "local",
         "x": 950,
-        "y": 880,
+        "y": 924,
         "wires": [
             [
-                "3fb547c9.47cfc8",
-                "ee22a170.6cc3a"
+                "65173114.eb6978",
+                "3d3b375.cd8cdc8"
             ]
         ]
     },
     {
-        "id": "b24c5637.06c738",
+        "id": "c8bd030c.ad5a",
         "type": "ui_template",
-        "z": "29b64849.38ee38",
-        "group": "f48396ab.6b4118",
+        "z": "8488c4ce.382e68",
+        "group": "7e298e0d.985158",
         "name": "DISARM",
         "order": 12,
         "width": "2",
@@ -937,19 +921,19 @@
         "fwdInMessages": false,
         "templateScope": "local",
         "x": 960,
-        "y": 920,
+        "y": 964,
         "wires": [
             [
-                "3fb547c9.47cfc8",
-                "ee22a170.6cc3a"
+                "65173114.eb6978",
+                "3d3b375.cd8cdc8"
             ]
         ]
     },
     {
-        "id": "69babe94.0e609",
+        "id": "50ff2da6.32afa4",
         "type": "ui_template",
-        "z": "29b64849.38ee38",
-        "group": "f48396ab.6b4118",
+        "z": "8488c4ce.382e68",
+        "group": "7e298e0d.985158",
         "name": "C",
         "order": 15,
         "width": "2",
@@ -959,34 +943,34 @@
         "fwdInMessages": false,
         "templateScope": "local",
         "x": 950,
-        "y": 960,
+        "y": 1004,
         "wires": [
             [
-                "3fb547c9.47cfc8",
-                "ee22a170.6cc3a"
+                "65173114.eb6978",
+                "3d3b375.cd8cdc8"
             ]
         ]
     },
     {
-        "id": "3fb547c9.47cfc8",
+        "id": "65173114.eb6978",
         "type": "function",
-        "z": "29b64849.38ee38",
+        "z": "8488c4ce.382e68",
         "name": "Message Complete",
         "func": "msg.payload=\"\";\nmsg.complete=true;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "x": 1230,
-        "y": 860,
+        "y": 904,
         "wires": [
             [
-                "c8549b10.b96a98"
+                "6f283f33.613628"
             ]
         ]
     },
     {
-        "id": "ee22a170.6cc3a",
+        "id": "3d3b375.cd8cdc8",
         "type": "delay",
-        "z": "29b64849.38ee38",
+        "z": "8488c4ce.382e68",
         "name": "500ms",
         "pauseType": "delay",
         "timeout": "500",
@@ -999,31 +983,31 @@
         "randomUnits": "seconds",
         "drop": false,
         "x": 1190,
-        "y": 780,
+        "y": 824,
         "wires": [
             [
-                "f19f3729.8b8c38"
+                "92a5953d.b9f2f8"
             ]
         ]
     },
     {
-        "id": "276379ee.c28bc6",
+        "id": "1876ce8d.0ba4e9",
         "type": "yaml",
-        "z": "29b64849.38ee38",
+        "z": "8488c4ce.382e68",
         "property": "payload",
         "name": "",
         "x": 537,
         "y": 24,
         "wires": [
             [
-                "ae4b4bb9.f06a48"
+                "86296b0a.c81858"
             ]
         ]
     },
     {
-        "id": "98115aa3.09bbc8",
+        "id": "acd376af.62eb68",
         "type": "inject",
-        "z": "29b64849.38ee38",
+        "z": "8488c4ce.382e68",
         "name": "Startup",
         "topic": "",
         "payload": "",
@@ -1036,14 +1020,14 @@
         "y": 24,
         "wires": [
             [
-                "ea9572ab.e3878"
+                "d8567e9b.b7dca"
             ]
         ]
     },
     {
-        "id": "ea9572ab.e3878",
+        "id": "d8567e9b.b7dca",
         "type": "file in",
-        "z": "29b64849.38ee38",
+        "z": "8488c4ce.382e68",
         "name": "",
         "filename": "/config/alarm.yaml",
         "format": "utf8",
@@ -1052,14 +1036,14 @@
         "y": 24,
         "wires": [
             [
-                "276379ee.c28bc6"
+                "1876ce8d.0ba4e9"
             ]
         ]
     },
     {
-        "id": "ae4b4bb9.f06a48",
+        "id": "86296b0a.c81858",
         "type": "function",
-        "z": "29b64849.38ee38",
+        "z": "8488c4ce.382e68",
         "name": "get settings from yaml",
         "func": "\n// reset global variables\nglobal.set(\"usercount\",\"\")\nglobal.set(\"codes\",\"\")\nglobal.set(\"name\",\"\")\nglobal.set(\"picture\",\"\")\nglobal.set(\"LockTime\",\"\") \nglobal.set(\"MaxRetries\",\"\")\n\nvar msgs = [];\nvar codes = [];\nvar name = [];\nvar picture = [];\nvar lockout = msg.payload.passcode_attempts_timeout;\nvar pass_attempts = msg.payload.passcode_attempts\nvar count = 0;\nfor (var i = 0; i< msg.payload.users.length; i++) {\n  if ( msg.payload.users[i].enabled === true) {\n    codes.push(msg.payload.users[i].code);\n    name.push(msg.payload.users[i].name);\n    picture.push(msg.payload.users[i].picture);\n    count +=1\n  }\n}\nglobal.set(\"usercount\",count)\nglobal.set(\"codes\",codes)\nglobal.set(\"name\",name)\nglobal.set(\"picture\",picture)\nglobal.set(\"LockTime\",lockout) \nglobal.set(\"MaxRetries\",pass_attempts)\nmsgs.push({payload: codes});\nreturn [msgs]\n\n",
         "outputs": 1,
@@ -1068,122 +1052,122 @@
         "y": 24,
         "wires": [
             [
-                "ffb0acac.484bb"
+                "30645b60.796844"
             ]
         ]
     },
     {
-        "id": "d42a7322.14a67",
+        "id": "5b7038b4.cc4bc",
         "type": "function",
-        "z": "29b64849.38ee38",
+        "z": "8488c4ce.382e68",
         "name": "Unlock",
         "func": "if ( msg.payload === \"unlocked\" ) {counter = 0; global.set(\"Counter\",counter);}\nif ( msg.payload === \"unlocked\" ) { \n    msg.counter = \"\";\n    msg.locked  = \"\";\n    msg.payload = \"\";\n    return msg; }\nif ( msg.payload !== \"unlocked\" ) { return null; }\n",
         "outputs": 1,
         "noerr": 0,
         "x": 1919,
-        "y": 660,
+        "y": 704,
         "wires": [
             [
-                "1a6ed693.358f99"
+                "27be1b4e.d3d89c"
             ]
         ]
     },
     {
-        "id": "66fb9e39.ce3ba",
+        "id": "5e3ae2e8.b145bc",
         "type": "function",
-        "z": "29b64849.38ee38",
+        "z": "8488c4ce.382e68",
         "name": "Countdown",
         "func": "var countdown = global.get(\"LockTime\"); \n\n(function myLoop (i) {          \n   setTimeout(function () {   \n          msg.enabled = \"Panel Locked for: \" + i + \" Seconds\"\n          node.send(msg)\n      if (--i) myLoop(i);\n      \n      if ( i === 0) {\n            msg.payload = \"unlocked\"\n            node.send(msg)          \n      }\n      \n   }, 1000)\n})(countdown); \n\n \n",
         "outputs": 1,
         "noerr": 0,
         "x": 1879,
-        "y": 620,
+        "y": 664,
         "wires": [
             [
-                "d42a7322.14a67",
-                "e5bfe0ad.3a778"
+                "5b7038b4.cc4bc",
+                "300916c2.f885d2"
             ]
         ]
     },
     {
-        "id": "bb4eee13.8366",
+        "id": "66ab173e.bef97",
         "type": "link out",
-        "z": "29b64849.38ee38",
+        "z": "8488c4ce.382e68",
         "name": "",
         "links": [
-            "7661f558.33751c",
-            "508e813b.f36b6"
+            "83753d86.ce6dc",
+            "7e237624.af0718"
         ],
         "x": 1864,
-        "y": 579,
+        "y": 623,
         "wires": []
     },
     {
-        "id": "7661f558.33751c",
+        "id": "83753d86.ce6dc",
         "type": "link in",
-        "z": "29b64849.38ee38",
+        "z": "8488c4ce.382e68",
         "name": "locked",
         "links": [
-            "634c1706.bee188",
-            "bb4eee13.8366"
+            "44f69b00.bf9854",
+            "66ab173e.bef97"
         ],
         "x": 315,
-        "y": 680,
+        "y": 679,
         "wires": [
             [
-                "ca5c7d02.a1e78"
+                "406cac4a.819abc"
             ]
         ]
     },
     {
-        "id": "508e813b.f36b6",
+        "id": "7e237624.af0718",
         "type": "link in",
-        "z": "29b64849.38ee38",
+        "z": "8488c4ce.382e68",
         "name": "reinject image",
         "links": [
-            "bb4eee13.8366",
-            "634c1706.bee188"
+            "66ab173e.bef97",
+            "44f69b00.bf9854"
         ],
         "x": 675,
-        "y": 140,
+        "y": 139,
         "wires": [
             [
-                "86617cd6.16e3a"
+                "b3c89643.78865"
             ]
         ]
     },
     {
-        "id": "e3a1238a.b8e7e",
+        "id": "3d428aa4.4d652e",
         "type": "link in",
-        "z": "29b64849.38ee38",
+        "z": "8488c4ce.382e68",
         "name": "Panel Status",
         "links": [
-            "e5bfe0ad.3a778"
+            "300916c2.f885d2"
         ],
         "x": 895,
-        "y": 1100,
+        "y": 1160,
         "wires": [
             [
-                "472a7a78.8392a4"
+                "5137153f.068d0c"
             ]
         ]
     },
     {
-        "id": "e5bfe0ad.3a778",
+        "id": "300916c2.f885d2",
         "type": "link out",
-        "z": "29b64849.38ee38",
+        "z": "8488c4ce.382e68",
         "name": "",
         "links": [
-            "e3a1238a.b8e7e"
+            "3d428aa4.4d652e"
         ],
         "x": 2152,
-        "y": 579,
+        "y": 623,
         "wires": []
     },
     {
-        "id": "a97aa75f.1f53e8",
+        "id": "427890f2.05b14",
         "type": "function",
-        "z": "29b64849.38ee38",
+        "z": "8488c4ce.382e68",
         "name": "Global Settings",
         "func": "\n\n// Global Settings\nglobal.set(\"Counter\",0) \nglobal.set(\"Imagepath\",\"http://192.168.32.203:8123/local/images/\")\nreturn msg;\n\n",
         "outputs": 1,
@@ -1195,9 +1179,9 @@
         ]
     },
     {
-        "id": "fa33a76d.f359f8",
+        "id": "b144abdf.afd428",
         "type": "inject",
-        "z": "29b64849.38ee38",
+        "z": "8488c4ce.382e68",
         "name": "Startup",
         "topic": "",
         "payload": "",
@@ -1210,16 +1194,16 @@
         "y": 68,
         "wires": [
             [
-                "a97aa75f.1f53e8"
+                "427890f2.05b14"
             ]
         ]
     },
     {
-        "id": "1a6ed693.358f99",
+        "id": "27be1b4e.d3d89c",
         "type": "api-current-state",
-        "z": "29b64849.38ee38",
+        "z": "8488c4ce.382e68",
         "name": "Alarm State",
-        "server": "ae6b7c22.70fac",
+        "server": "7ef0ac76.c23934",
         "outputs": 1,
         "halt_if": "",
         "halt_if_type": "str",
@@ -1232,40 +1216,40 @@
         "entity_location": "data",
         "override_data": "msg",
         "x": 1959,
-        "y": 700,
+        "y": 744,
         "wires": [
             [
-                "634c1706.bee188"
+                "44f69b00.bf9854"
             ]
         ]
     },
     {
-        "id": "634c1706.bee188",
+        "id": "44f69b00.bf9854",
         "type": "link out",
-        "z": "29b64849.38ee38",
+        "z": "8488c4ce.382e68",
         "name": "",
         "links": [
-            "7661f558.33751c",
-            "508e813b.f36b6"
+            "83753d86.ce6dc",
+            "7e237624.af0718"
         ],
         "x": 2064,
-        "y": 700,
+        "y": 744,
         "wires": []
     },
     {
-        "id": "cadf1168.30f9e",
+        "id": "f5456965.02322",
         "type": "comment",
-        "z": "29b64849.38ee38",
+        "z": "8488c4ce.382e68",
         "name": "Change this to your alarm_control_panel entity name => ",
         "info": "",
         "x": 1639,
-        "y": 703,
+        "y": 748,
         "wires": []
     },
     {
-        "id": "ffb0acac.484bb",
+        "id": "30645b60.796844",
         "type": "debug",
-        "z": "29b64849.38ee38",
+        "z": "8488c4ce.382e68",
         "name": "",
         "active": false,
         "tosidebar": true,
@@ -1278,23 +1262,23 @@
         "wires": []
     },
     {
-        "id": "842707b.536bff8",
+        "id": "ed03ef10.94a508",
         "type": "yaml",
-        "z": "29b64849.38ee38",
+        "z": "8488c4ce.382e68",
         "property": "payload",
         "name": "",
         "x": 1850,
-        "y": 804,
+        "y": 848,
         "wires": [
             [
-                "b31e01e1.49f23"
+                "ef293074.0e18a8"
             ]
         ]
     },
     {
-        "id": "b31e01e1.49f23",
+        "id": "ef293074.0e18a8",
         "type": "file",
-        "z": "29b64849.38ee38",
+        "z": "8488c4ce.382e68",
         "name": "",
         "filename": "/config/alarm_logging.yaml",
         "appendNewline": true,
@@ -1302,34 +1286,15 @@
         "overwriteFile": "false",
         "encoding": "none",
         "x": 2030,
-        "y": 804,
+        "y": 848,
         "wires": [
             []
         ]
     },
     {
-        "id": "d79bc80f.bd3ec8",
-        "type": "ui_template",
-        "z": "29b64849.38ee38",
-        "group": "d2b9abcc.7591a8",
-        "name": "Clock Toolbar",
-        "order": 2,
-        "width": "0",
-        "height": "0",
-        "format": "<script id=\"titleScript\" type=\"text/javascript\">\n\n$(function() {\n    if($('.md-toolbar-tools').length != 0){\n        loadClock();\n    }else setTimeout(loadClock, 500)\n});\n\nfunction loadClock(){\n    $('#clock').remove();\n    var toolbar = $('.md-toolbar-tools');\n    \n    var div = $('<div/>');\n    var p = $('<p/ id=\"clock\">');\n    \n    div.append(p);\n    div[0].style.margin = '5px 5px 5px auto';\n    toolbar.append(div);\n\n    function displayTitle(lh) {\n        p.text(lh); \n    }\n    \n    function upTime() {\n        var d = new Date();\n        p.text(d.toLocaleString());\n    }\n\n    if(document.clockInterval){ \n            clearInterval(document.clockInterval);\n            document.clockInterval = null;\n    }\n        \n    document.clockInterval = setInterval(upTime,1000);\n}\n\n</script>",
-        "storeOutMessages": false,
-        "fwdInMessages": false,
-        "templateScope": "global",
-        "x": 1620,
-        "y": 148,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "8c7141d2.5d035",
+        "id": "653900b1.3ea958",
         "type": "comment",
-        "z": "29b64849.38ee38",
+        "z": "8488c4ce.382e68",
         "name": "Global UI Settings",
         "info": "",
         "x": 1620,
@@ -1337,29 +1302,29 @@
         "wires": []
     },
     {
-        "id": "c7321939.ea4848",
+        "id": "2f25c394.f7102c",
         "type": "comment",
-        "z": "29b64849.38ee38",
+        "z": "8488c4ce.382e68",
         "name": "Logging to file",
         "info": "",
         "x": 1860,
-        "y": 764,
+        "y": 809,
         "wires": []
     },
     {
-        "id": "7b32c202.6ded14",
+        "id": "11c16238.be60e6",
         "type": "comment",
-        "z": "29b64849.38ee38",
+        "z": "8488c4ce.382e68",
         "name": "<== Change the MQTT details to match Hassio",
         "info": "",
         "x": 2210,
-        "y": 517,
+        "y": 562,
         "wires": []
     },
     {
-        "id": "e3f7e787.cdce28",
+        "id": "b084de46.3780c",
         "type": "comment",
-        "z": "29b64849.38ee38",
+        "z": "8488c4ce.382e68",
         "name": "<== Change path to your hassio address ",
         "info": "",
         "x": 661,
@@ -1367,29 +1332,446 @@
         "wires": []
     },
     {
-        "id": "3d1871c9.a6bf6e",
+        "id": "abf5a12f.ccfbf8",
+        "type": "ui_ui_control",
+        "z": "8488c4ce.382e68",
+        "name": "",
+        "x": 780,
+        "y": 1257,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "22187497.d05604",
+        "type": "file in",
+        "z": "8488c4ce.382e68",
+        "name": "",
+        "filename": "/config/alarm_logging.json",
+        "format": "lines",
+        "sendError": true,
+        "x": 600,
+        "y": 1297,
+        "wires": [
+            [
+                "1f405732.7458b1"
+            ]
+        ]
+    },
+    {
+        "id": "1f405732.7458b1",
+        "type": "json",
+        "z": "8488c4ce.382e68",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 790,
+        "y": 1297,
+        "wires": [
+            [
+                "ca47d8da.1d4d58"
+            ]
+        ]
+    },
+    {
+        "id": "ca47d8da.1d4d58",
+        "type": "join",
+        "z": "8488c4ce.382e68",
+        "name": "",
+        "mode": "custom",
+        "build": "array",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": ",",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "1",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 910,
+        "y": 1297,
+        "wires": [
+            [
+                "3bd9d5f3.9bf422"
+            ]
+        ]
+    },
+    {
+        "id": "25921260.8c0e1e",
+        "type": "ui_template",
+        "z": "8488c4ce.382e68",
+        "group": "fcd0073.f2d7678",
+        "name": "",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\ntable {\n  width: 100%;\n}\n\nth {\n  background-color: #2980B9;\n  color: white;\n  height: 50px;\n}\n\ntr {\n  height: 40px;\n}\n\ntr:nth-child(even) {background-color: #f2f2f2;}\n\n</style>\n<table id=\"table\" border=\"0\">\n        <tr>\n            <th>Datum</th>\n            <th>Zeit</th>\n            <th>User</th>\n            <th>Status</th>\n        </tr>\n<tbody>\n\n<tr ng-repeat=\"row in msg.payload\">\n    <td ng-repeat=\"item in row\" >{{item}}</td>\n</tr>\n</tbody>\n</table>",
+        "storeOutMessages": false,
+        "fwdInMessages": true,
+        "templateScope": "local",
+        "x": 1180,
+        "y": 1297,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c9b1c324.1368e",
+        "type": "delay",
+        "z": "8488c4ce.382e68",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "500",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 580,
+        "y": 1257,
+        "wires": [
+            [
+                "abf5a12f.ccfbf8"
+            ]
+        ]
+    },
+    {
+        "id": "f4a8fa95.1dbfd",
+        "type": "ui_template",
+        "z": "8488c4ce.382e68",
+        "group": "815f23e1.e0556",
+        "name": "KeyPad",
+        "order": 6,
+        "width": "2",
+        "height": "1",
+        "format": "\n<md-button class=\"vibrate filled touched bigfont rounded\" style=\"background-color:#2980b9\"   ng-click=\"send({payload: 'KeyPad'})\"> \n    KeyPad\n</md-button> \n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": false,
+        "templateScope": "local",
+        "x": 340,
+        "y": 1177,
+        "wires": [
+            [
+                "30b3e68f.758672"
+            ]
+        ]
+    },
+    {
+        "id": "d1103bb7.2a88a",
+        "type": "ui_template",
+        "z": "8488c4ce.382e68",
+        "group": "815f23e1.e0556",
+        "name": "Log",
+        "order": 7,
+        "width": "2",
+        "height": "1",
+        "format": "\n<md-button class=\"vibrate filled touched bigfont rounded\" style=\"background-color:#2980b9\"   ng-click=\"send({payload: 'Log'})\"> \n    Log\n</md-button> \n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": false,
+        "templateScope": "local",
+        "x": 330,
+        "y": 1217,
+        "wires": [
+            [
+                "30b3e68f.758672",
+                "22187497.d05604"
+            ]
+        ]
+    },
+    {
+        "id": "30b3e68f.758672",
+        "type": "function",
+        "z": "8488c4ce.382e68",
+        "name": "",
+        "func": "if ( msg.payload === \"KeyPad\" )\n        msg.payload = {\n           \"group\": \n              { \n                 \"hide\": [\"Alarm_Panel_Log\"],\n                 \"show\": [\"Alarm_Panel_Alarm_Panel\"],\n                 \"focus\": true\n                }\n        }\n\nif ( msg.payload === \"Log\" )\n        msg.payload = {\n           \"group\": \n              { \n                 \"hide\": [\"Alarm_Panel_Alarm_Panel\"],\n                 \"show\": [\"Alarm_Panel_Log\"],\n                 \"focus\": true\n                }\n        }\n\nreturn msg;\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 520,
+        "y": 1217,
+        "wires": [
+            [
+                "c9b1c324.1368e"
+            ]
+        ]
+    },
+    {
+        "id": "44895d21.b3c45c",
+        "type": "ui_template",
+        "z": "8488c4ce.382e68",
+        "group": "815f23e1.e0556",
+        "name": "Placeholder left",
+        "order": 5,
+        "width": "2",
+        "height": "1",
+        "format": "\n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": false,
+        "templateScope": "local",
+        "x": 360,
+        "y": 1137,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4e727509.c37d54",
+        "type": "inject",
+        "z": "8488c4ce.382e68",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "120",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "5",
+        "x": 190,
+        "y": 1297,
+        "wires": [
+            [
+                "22187497.d05604"
+            ]
+        ]
+    },
+    {
+        "id": "7b318be6.94ed8c",
+        "type": "inject",
+        "z": "8488c4ce.382e68",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "x": 190,
+        "y": 1177,
+        "wires": [
+            [
+                "f4a8fa95.1dbfd"
+            ]
+        ]
+    },
+    {
+        "id": "bb186d2b.3983a",
+        "type": "comment",
+        "z": "8488c4ce.382e68",
+        "name": "KeyPad / Log Buttons UI",
+        "info": "",
+        "x": 200,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "3bd9d5f3.9bf422",
+        "type": "function",
+        "z": "8488c4ce.382e68",
+        "name": "",
+        "func": "arr = msg.payload\nlogs = arr.slice(Math.max(arr.length - 10, 1)) \n\n    for ( var i = 0; i < logs.length; i++) {\n        if ( logs[i][3] === \"DISARM\" ) { logs[i][3] = \"Deaktiviert\" }\n        if ( logs[i][3] === \"ARM_HOME\" ) { logs[i][3] = \"Zu Hause\" }\n        if ( logs[i][3] === \"ARM_AWAY\" ) { logs[i][3] = \"Unterwegs\" }\n    }\n\nmsg.payload = logs\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1030,
+        "y": 1297,
+        "wires": [
+            [
+                "25921260.8c0e1e"
+            ]
+        ]
+    },
+    {
+        "id": "c0a7132a.14b3b",
+        "type": "ui_template",
+        "z": "8488c4ce.382e68",
+        "group": "7e298e0d.985158",
+        "name": "UI Stuff Alarm Panel",
+        "order": 16,
+        "width": "0",
+        "height": "0",
+        "format": "<style>\n  .filled { \n      height: 100% !important;\n\n      padding: 0 !important;\n      margin: 0 !important;\n  }\n  .nr-dashboard-template {\n      padding: 0;\n      margin: 0;\n  }\n  \n  .rounded {\n  border-radius: 20px 20px 20px 20px;\n}\n \n   .bigfont {\n  font-size: 18px;\n}\n\n   .smallfont {\n  font-size: 14px;\n}\n\n   .littlefont {\n  font-size: 10px;\n}\n\n  #masonry-container {\n      background: white;\n  }\n  \n  }\n</style>\n\n<script>\n$('.vibrate').on('click', function() {\n  navigator.vibrate(100);\n});\n\nfunction restore_bg(x) {\n            $(this).css(\"background-color\", x);\n    };\n\n$('.touched').on('mousedown', function() {\n    \n    var x= $(this).css(\"background-color\");\n    $(this).css(\"background-color\", \"#33ccff\");\n    \n    setTimeout(restore_bg.bind(this,x),100);\n    navigator.vibrate(80);\n    });\n    \n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "templateScope": "local",
+        "x": 1630,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "54d3e25d.efc364",
+        "type": "ui_template",
+        "z": "8488c4ce.382e68",
+        "group": "643faa2e.065374",
+        "name": "Clock Toolbar",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "format": "<script id=\"titleScript\" type=\"text/javascript\">\n\n$(function() {\n    if($('.md-toolbar-tools').length != 0){\n        loadClock();\n    }else setTimeout(loadClock, 500)\n});\n\nfunction loadClock(){\n    $('#clock').remove();\n    var toolbar = $('.md-toolbar-tools');\n    \n    var div = $('<div/>');\n    var p = $('<p/ id=\"clock\">');\n    \n    div.append(p);\n    div[0].style.margin = '5px 5px 5px auto';\n    toolbar.append(div);\n\n    function displayTitle(lh) {\n        p.text(lh); \n    }\n    \n    function upTime() {\n        var d = new Date();\n        p.text(d.toLocaleString());\n    }\n\n    if(document.clockInterval){ \n            clearInterval(document.clockInterval);\n            document.clockInterval = null;\n    }\n        \n    document.clockInterval = setInterval(upTime,1000);\n}\n\n</script>",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "templateScope": "global",
+        "x": 1620,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6f28e3f4.06674c",
+        "type": "ui_template",
+        "z": "8488c4ce.382e68",
+        "group": "815f23e1.e0556",
+        "name": "UI Stuff Alarm Panel Left",
+        "order": 8,
+        "width": "0",
+        "height": "0",
+        "format": "<style>\n  .filled { \n      height: 100% !important;\n\n      padding: 0 !important;\n      margin: 0 !important;\n  }\n  .nr-dashboard-template {\n      padding: 0;\n      margin: 0;\n  }\n  \n  .rounded {\n  border-radius: 20px 20px 20px 20px;\n}\n \n   .bigfont {\n  font-size: 18px;\n}\n\n   .smallfont {\n  font-size: 14px;\n}\n\n   .littlefont {\n  font-size: 10px;\n}\n\n  #masonry-container {\n      background: white;\n  }\n  \n  }\n</style>\n\n<script>\n$('.vibrate').on('click', function() {\n  navigator.vibrate(100);\n});\n\nfunction restore_bg(x) {\n            $(this).css(\"background-color\", x);\n    };\n\n$('.touched').on('mousedown', function() {\n    \n    var x= $(this).css(\"background-color\");\n    $(this).css(\"background-color\", \"#33ccff\");\n    \n    setTimeout(restore_bg.bind(this,x),100);\n    navigator.vibrate(80);\n    });\n    \n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "templateScope": "local",
+        "x": 1650,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1c07ab57.a10075",
+        "type": "link in",
+        "z": "8488c4ce.382e68",
+        "name": "reinject state",
+        "links": [
+            "6bb276e9.e041b"
+        ],
+        "x": 455,
+        "y": 460,
+        "wires": [
+            [
+                "9f9fff32.5e3db"
+            ]
+        ]
+    },
+    {
+        "id": "2c1c6e2d.133712",
+        "type": "link in",
+        "z": "8488c4ce.382e68",
+        "name": "wrong pin",
+        "links": [
+            "f090143b.ab0a6"
+        ],
+        "x": 855,
+        "y": 400,
+        "wires": [
+            [
+                "92089a5.95bf9e8"
+            ]
+        ]
+    },
+    {
+        "id": "92089a5.95bf9e8",
+        "type": "change",
+        "z": "8488c4ce.382e68",
+        "name": "\"pin\"",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Incorrect PIN",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 950,
+        "y": 400,
+        "wires": [
+            [
+                "c8bd9775.8f4858",
+                "6ba3b0dd.bc15a"
+            ]
+        ]
+    },
+    {
+        "id": "c8bd9775.8f4858",
+        "type": "delay",
+        "z": "8488c4ce.382e68",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "8",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 1120,
+        "y": 400,
+        "wires": [
+            [
+                "6bb276e9.e041b"
+            ]
+        ]
+    },
+    {
+        "id": "6bb276e9.e041b",
+        "type": "link out",
+        "z": "8488c4ce.382e68",
+        "name": "reinject state",
+        "links": [
+            "1c07ab57.a10075"
+        ],
+        "x": 1235,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "f090143b.ab0a6",
+        "type": "link out",
+        "z": "8488c4ce.382e68",
+        "name": "wrong pin",
+        "links": [
+            "2c1c6e2d.133712"
+        ],
+        "x": 1735,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "815f23e1.e0556",
         "type": "ui_group",
         "z": "",
         "name": "Alarm Panel Left",
-        "tab": "92adcf69.9d147",
+        "tab": "dcfa25c2.2fb9a8",
         "order": 2,
         "disp": false,
         "width": "8",
         "collapse": false
     },
     {
-        "id": "ae6b7c22.70fac",
+        "id": "7ef0ac76.c23934",
         "type": "server",
         "z": "",
         "name": "Home Assistant",
-        "legacy": false,
-        "hassio": true,
-        "rejectUnauthorizedCerts": true,
-        "ha_boolean": "y|yes|true|on|home|open",
-        "connectionDelay": true
+        "legacy": false
     },
     {
-        "id": "56eb5a09.1f0884",
+        "id": "1c2a2feb.1246b",
         "type": "mqtt-broker",
         "z": "",
         "name": "",
@@ -1411,29 +1793,50 @@
         "willPayload": ""
     },
     {
-        "id": "f48396ab.6b4118",
+        "id": "7e298e0d.985158",
         "type": "ui_group",
         "z": "",
         "name": "Alarm Panel",
-        "tab": "92adcf69.9d147",
+        "tab": "dcfa25c2.2fb9a8",
         "order": 3,
         "disp": false,
         "width": "8",
         "collapse": false
     },
     {
-        "id": "d2b9abcc.7591a8",
+        "id": "fcd0073.f2d7678",
+        "type": "ui_group",
+        "z": "",
+        "name": "Log",
+        "tab": "f9c62323.059108",
+        "order": 4,
+        "disp": false,
+        "width": "8",
+        "collapse": false
+    },
+    {
+        "id": "643faa2e.065374",
         "type": "ui_group",
         "z": "",
         "name": "hidden_group",
-        "tab": "92adcf69.9d147",
+        "tab": "dcfa25c2.2fb9a8",
         "order": 1,
         "disp": false,
         "width": "6",
         "collapse": false
     },
     {
-        "id": "92adcf69.9d147",
+        "id": "dcfa25c2.2fb9a8",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Alarm Panel",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "f9c62323.059108",
         "type": "ui_tab",
         "z": "",
         "name": "Alarm Panel",
