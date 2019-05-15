@@ -1160,8 +1160,8 @@
         "links": [
             "3d428aa4.4d652e"
         ],
-        "x": 2152,
-        "y": 623,
+        "x": 2008,
+        "y": 665,
         "wires": []
     },
     {
@@ -1406,12 +1406,12 @@
         "id": "25921260.8c0e1e",
         "type": "ui_template",
         "z": "8488c4ce.382e68",
-        "group": "fcd0073.f2d7678",
+        "group": "14e2f2a4.cfdb25",
         "name": "",
         "order": 1,
         "width": 0,
         "height": 0,
-        "format": "<style>\ntable {\n  width: 100%;\n}\n\nth {\n  background-color: #2980B9;\n  color: white;\n  height: 50px;\n}\n\ntr {\n  height: 40px;\n}\n\ntr:nth-child(even) {background-color: #f2f2f2;}\n\n</style>\n<table id=\"table\" border=\"0\">\n        <tr>\n            <th>Datum</th>\n            <th>Zeit</th>\n            <th>User</th>\n            <th>Status</th>\n        </tr>\n<tbody>\n\n<tr ng-repeat=\"row in msg.payload\">\n    <td ng-repeat=\"item in row\" >{{item}}</td>\n</tr>\n</tbody>\n</table>",
+        "format": "<style>\ntable {\n  width: 100%;\n}\n\nth {\n  background-color: #2980B9;\n  color: white;\n  height: 50px;\n}\n\ntr {\n  height: 40px;\n}\n\ntr:nth-child(even) {background-color: #f2f2f2;}\n\n</style>\n<table id=\"table\" border=\"0\">\n        <tr>\n            <th>Date</th>\n            <th>Time</th>\n            <th>User</th>\n            <th>State</th>\n        </tr>\n<tbody>\n\n<tr ng-repeat=\"row in msg.payload\">\n    <td ng-repeat=\"item in row\" >{{item}}</td>\n</tr>\n</tbody>\n</table>",
         "storeOutMessages": false,
         "fwdInMessages": true,
         "templateScope": "local",
@@ -1804,11 +1804,11 @@
         "collapse": false
     },
     {
-        "id": "fcd0073.f2d7678",
+        "id": "14e2f2a4.cfdb25",
         "type": "ui_group",
         "z": "",
         "name": "Log",
-        "tab": "f9c62323.059108",
+        "tab": "dcfa25c2.2fb9a8",
         "order": 4,
         "disp": false,
         "width": "8",
@@ -1827,16 +1827,6 @@
     },
     {
         "id": "dcfa25c2.2fb9a8",
-        "type": "ui_tab",
-        "z": "",
-        "name": "Alarm Panel",
-        "icon": "dashboard",
-        "order": 1,
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "f9c62323.059108",
         "type": "ui_tab",
         "z": "",
         "name": "Alarm Panel",
