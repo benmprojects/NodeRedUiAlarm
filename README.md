@@ -1,4 +1,4 @@
-# Node Red UI Alarm Panel - By Manzn
+# Node Red UI Alarm Panel - By Manzn with additions from Benmprojects
 
 ## Disclaimer
 The repo is built on the code from Manzn. I have only made very minor changes and converted code to English.
