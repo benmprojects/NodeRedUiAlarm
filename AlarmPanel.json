@@ -1763,7 +1763,7 @@
         "fieldType": "msg",
         "format": "css",
         "syntax": "mustache",
-        "template": "table {\n  width: 100%;\n}\n\nth {\n  background-color: #2980B9;\n  color: white;\n  height: 60px;\n}\n\ntr {\n  height: 40px;\n}\n\ntr:nth-child(even) {background-color: #f2f2f2;}\n\n",
+        "template": "table {\n  width: 100%;\n}\n\nth {\n  background-color: #2980B9;\n  color: white;\n  height: 50px;\n}\n\ntr {\n  height: 40px;\n}\n\ntr:nth-child(even) {background-color: #f2f2f2;}\n\n",
         "output": "str",
         "x": 930,
         "y": 1334,
