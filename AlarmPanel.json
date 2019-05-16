@@ -1,15 +1,15 @@
 [
     {
-        "id": "8488c4ce.382e68",
+        "id": "59a537e2.ef62e8",
         "type": "tab",
         "label": "Alarm Panel",
         "disabled": false,
         "info": ""
     },
     {
-        "id": "6f283f33.613628",
+        "id": "eceeb7a3.6f2598",
         "type": "join",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "",
         "mode": "custom",
         "build": "string",
@@ -30,15 +30,15 @@
         "y": 624,
         "wires": [
             [
-                "92a5953d.b9f2f8"
+                "aa4b85ef.8d4a8"
             ]
         ]
     },
     {
-        "id": "b1e882eb.8ec86",
+        "id": "ec80a0a6.3060e8",
         "type": "ui_template",
-        "z": "8488c4ce.382e68",
-        "group": "815f23e1.e0556",
+        "z": "59a537e2.ef62e8",
+        "group": "2961e3b4.04b5ec",
         "name": "Show Alarm Status Image",
         "order": 1,
         "width": "8",
@@ -54,11 +54,11 @@
         ]
     },
     {
-        "id": "99fd1b83.237438",
+        "id": "2ba7209b.92b8a",
         "type": "server-state-changed",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "Alarm Panel",
-        "server": "7ef0ac76.c23934",
+        "server": "c384f8e0.a1a8e8",
         "entityidfilter": "alarm_control_panel.house",
         "entityidfiltertype": "exact",
         "outputinitially": false,
@@ -72,17 +72,17 @@
         "y": 279,
         "wires": [
             [
-                "525db5ed.09c434",
-                "b3c89643.78865",
-                "9f9fff32.5e3db"
+                "fef91345.50f808",
+                "e9492c74.0b2c9",
+                "b631159e.e2e59"
             ]
         ]
     },
     {
-        "id": "6ba3b0dd.bc15a",
+        "id": "8fd0c4f4.92f63",
         "type": "ui_text",
-        "z": "8488c4ce.382e68",
-        "group": "815f23e1.e0556",
+        "z": "59a537e2.ef62e8",
+        "group": "2961e3b4.04b5ec",
         "order": 2,
         "width": "8",
         "height": "1",
@@ -95,9 +95,9 @@
         "wires": []
     },
     {
-        "id": "10a23b32.a06b9d",
+        "id": "f6ac9fa2.41ef4",
         "type": "change",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "\"armed home\"",
         "rules": [
             {
@@ -119,14 +119,14 @@
         "y": 199,
         "wires": [
             [
-                "6ba3b0dd.bc15a"
+                "8fd0c4f4.92f63"
             ]
         ]
     },
     {
-        "id": "525db5ed.09c434",
+        "id": "fef91345.50f808",
         "type": "switch",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "",
         "property": "payload",
         "propertyType": "msg",
@@ -164,26 +164,26 @@
         "y": 279,
         "wires": [
             [
-                "10a23b32.a06b9d"
+                "f6ac9fa2.41ef4"
             ],
             [
-                "accc33b0.f7045"
+                "35dcc94f.246436"
             ],
             [
-                "6c39bdd8.eae124"
+                "63993c63.6fa5dc"
             ],
             [
-                "b84a091d.f39b1"
+                "55aa91f.925b67"
             ],
             [
-                "6556efbb.d02378"
+                "448f2826.16287"
             ]
         ]
     },
     {
-        "id": "accc33b0.f7045",
+        "id": "35dcc94f.246436",
         "type": "change",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "\"armed away\"",
         "rules": [
             {
@@ -205,14 +205,14 @@
         "y": 239,
         "wires": [
             [
-                "6ba3b0dd.bc15a"
+                "8fd0c4f4.92f63"
             ]
         ]
     },
     {
-        "id": "6c39bdd8.eae124",
+        "id": "63993c63.6fa5dc",
         "type": "change",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "\"triggered\"",
         "rules": [
             {
@@ -234,14 +234,14 @@
         "y": 279,
         "wires": [
             [
-                "6ba3b0dd.bc15a"
+                "8fd0c4f4.92f63"
             ]
         ]
     },
     {
-        "id": "b84a091d.f39b1",
+        "id": "55aa91f.925b67",
         "type": "change",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "\"disarmed\"",
         "rules": [
             {
@@ -263,14 +263,14 @@
         "y": 319,
         "wires": [
             [
-                "6ba3b0dd.bc15a"
+                "8fd0c4f4.92f63"
             ]
         ]
     },
     {
-        "id": "406cac4a.819abc",
+        "id": "724795b1.fadbec",
         "type": "function",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "Hide Button on State",
         "func": "msgs_home = {}\nif (msg.payload === \"armed_home\") { msgs_home.color = \"white\"; msgs_home.background = \"white\"; msgs_home.enabled = false; }\nelse if (msg.payload === \"armed_away\") { msgs_home.color = \"white\"; msgs_home.background = \"white\"; msgs_home.enabled = false; }\nelse if (msg.payload === \"triggered\") { msgs_home.color = \"white\"; msgs_home.background = \"white\"; msgs_home.enabled = false;  }\nelse if (msg.payload === \"pending\") { msgs_home.color = \"white\"; msgs_home.background = \"white\"; msgs_home.enabled = false; }\nelse if (msg.payload === \"disarmed\") { msgs_home.color = \"\"; msgs_home.background = \"\"; msgs_home.enabled = true; }\nif (msg.locked === \"locked\") { msgs_home.enabled = false; }\n\nmsgs_away = {}\nif (msg.payload === \"armed_home\") { msgs_away.color = \"white\"; msgs_away.background = \"white\"; msgs_away.enabled = false; }\nelse if (msg.payload === \"armed_away\") { msgs_away.color = \"white\"; msgs_away.background = \"white\"; msgs_away.enabled = false; }\nelse if (msg.payload === \"triggered\") { msgs_away.color = \"white\"; msgs_away.background = \"white\"; msgs_away.enabled = false;  }\nelse if (msg.payload === \"pending\") { msgs_home.color = \"white\"; msgs_away.background = \"white\"; msgs_home.enabled = false; }\nelse if (msg.payload === \"disarmed\") { msgs_away.color = \"\"; msgs_away.background = \"\"; msgs_away.enabled = true; }\nif (msg.locked === \"locked\") { msgs_away.enabled = false; }\n\nmsgs_disarmed = {}\nif (msg.payload === \"armed_home\") { msgs_disarmed.color = \"\"; msgs_disarmed.background = \"\"; msgs_disarmed.enabled = true; }\nelse if (msg.payload === \"armed_away\") { msgs_disarmed.color = \"\"; msgs_disarmed.background = \"\"; msgs_disarmed.enabled = true; }\nelse if (msg.payload === \"triggered\") { msgs_disarmed.color = \"\"; msgs_disarmed.background = \"\"; msgs_disarmed.enabled = true; }\nelse if (msg.payload === \"pending\") { msgs_disarmed.color = \"\"; msgs_disarmed.background = \"\"; msgs_disarmed.enabled = true; }\nelse if (msg.payload === \"disarmed\") { msgs_disarmed.color = \"white\"; msgs_disarmed.background = \"white\"; msgs_disarmed.enabled = false; }\nif (msg.locked === \"locked\") { msgs_disarmed.enabled = false; }\n\nmsgs_panel_locked = {}\nif (msg.locked === \"locked\") { msgs_panel_locked.enabled = false; }\nelse if (msg.locked === \"unlocked\") { msgs_panel_locked.enabled = true; }\nelse if (msg.payload === \"armed_home\") { msgs_panel_locked.enabled = true; }\nelse if (msg.payload === \"armed_away\") { msgs_panel_locked.enabled = true; }\nelse if (msg.payload === \"triggered\") { msgs_panel_locked.enabled = true; }\nelse if (msg.payload === \"pending\") { msgs_panel_locked.enabled = true; }\nelse if (msg.payload === \"disarmed\") { msgs_panel_locked.enabled = true; }\n\nreturn [ msgs_home, msgs_away, msgs_disarmed, msgs_panel_locked ];",
         "outputs": 4,
@@ -279,35 +279,35 @@
         "y": 680,
         "wires": [
             [
-                "aaedd5de.2acb3"
+                "1b3d14c7.2fbb2b"
             ],
             [
-                "6032f114.fb0ec8"
+                "cb5c514.98f05b"
             ],
             [
-                "cf55acd.5a4c35"
+                "22f4ece.bec8514"
             ],
             [
-                "7b322026.861608",
-                "4d75a773.630648",
-                "fb595c9d.114218",
-                "bb4c86c8.f8701",
-                "ec0570e4.15519",
-                "949d2a8e.d810c",
-                "3a452f67.1671f8",
-                "e84afff7.f96bf",
-                "3e3dd1f0.cc604e",
-                "50407676.35b3c8",
-                "192b6e6d.60bc5a",
-                "117e4a77.0773a6",
-                "50ff2da6.32afa4"
+                "4a58f30b.740fdc",
+                "d937865a.f93ab8",
+                "f62dad4a.82ac08",
+                "e09f8fb7.d38cb",
+                "4e820d5f.d7c7f4",
+                "b06b7f94.f2f128",
+                "10bd942f.0d0694",
+                "32b74787.59074",
+                "69448a70.07b5dc",
+                "7b34c9ed.36c428",
+                "c79effb8.8e8ff",
+                "43916088.6e2ab8",
+                "5bb1a4f8.d55a2c"
             ]
         ]
     },
     {
-        "id": "f7818028.38ca1",
+        "id": "c679f5.4a551608",
         "type": "inject",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "Manual Inject",
         "topic": "",
         "payload": "",
@@ -320,16 +320,16 @@
         "y": 403,
         "wires": [
             [
-                "9f9fff32.5e3db"
+                "b631159e.e2e59"
             ]
         ]
     },
     {
-        "id": "9f9fff32.5e3db",
+        "id": "b631159e.e2e59",
         "type": "api-current-state",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "Alarm State",
-        "server": "7ef0ac76.c23934",
+        "server": "14e7f26a.9e4c3e",
         "outputs": 1,
         "halt_if": "",
         "halt_if_type": "str",
@@ -345,16 +345,16 @@
         "y": 363,
         "wires": [
             [
-                "525db5ed.09c434",
-                "406cac4a.819abc",
-                "b3c89643.78865"
+                "fef91345.50f808",
+                "724795b1.fadbec",
+                "e9492c74.0b2c9"
             ]
         ]
     },
     {
-        "id": "92a5953d.b9f2f8",
+        "id": "aa4b85ef.8d4a8",
         "type": "join",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "",
         "mode": "custom",
         "build": "array",
@@ -375,27 +375,27 @@
         "y": 624,
         "wires": [
             [
-                "a039235f.0a8ce8"
+                "95de79e4.4693a8"
             ]
         ]
     },
     {
-        "id": "7b04dd60.b115d4",
+        "id": "1ff6e02.51140a",
         "type": "mqtt out",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "",
         "topic": "home/alarm/set",
         "qos": "",
         "retain": "",
-        "broker": "1c2a2feb.1246b",
+        "broker": "151b6ae5.bd61b5",
         "x": 1940,
         "y": 560,
         "wires": []
     },
     {
-        "id": "453b4701.e9d6e8",
+        "id": "4e4f1361.e3d0ac",
         "type": "change",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "Change Payload",
         "rules": [
             {
@@ -415,14 +415,14 @@
         "y": 564,
         "wires": [
             [
-                "7b04dd60.b115d4"
+                "1ff6e02.51140a"
             ]
         ]
     },
     {
-        "id": "7b322026.861608",
+        "id": "4a58f30b.740fdc",
         "type": "switch",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "",
         "property": "enabled",
         "propertyType": "msg",
@@ -441,17 +441,17 @@
         "y": 1084,
         "wires": [
             [
-                "b5c4f1ce.8ad88"
+                "c9c1927a.2aa7b"
             ],
             [
-                "9ad9428a.a60ab8"
+                "524a251e.70481c"
             ]
         ]
     },
     {
-        "id": "b5c4f1ce.8ad88",
+        "id": "c9c1927a.2aa7b",
         "type": "change",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "Locked",
         "rules": [
             {
@@ -471,14 +471,14 @@
         "y": 1064,
         "wires": [
             [
-                "5137153f.068d0c"
+                "26b58b3.f0b9274"
             ]
         ]
     },
     {
-        "id": "cf55acd.5a4c35",
+        "id": "22f4ece.bec8514",
         "type": "delay",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "",
         "pauseType": "delay",
         "timeout": "500",
@@ -494,15 +494,15 @@
         "y": 964,
         "wires": [
             [
-                "c8bd030c.ad5a"
+                "5246cf9f.e2da3"
             ]
         ]
     },
     {
-        "id": "5137153f.068d0c",
+        "id": "26b58b3.f0b9274",
         "type": "ui_text",
-        "z": "8488c4ce.382e68",
-        "group": "815f23e1.e0556",
+        "z": "59a537e2.ef62e8",
+        "group": "2961e3b4.04b5ec",
         "order": 3,
         "width": "8",
         "height": "1",
@@ -515,35 +515,35 @@
         "wires": []
     },
     {
-        "id": "a039235f.0a8ce8",
+        "id": "95de79e4.4693a8",
         "type": "function",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "Check Pin Code",
-        "func": "// variables\nvar msgs = {};\nvar codes = [];\nvar key_input = msg.payload[0];\nvar msg_error = \"\";\nvar key_check = {};\nvar usercode = [];\n\nlogging = {};\nlogging.payload = {};\n\n// get global variables from config file\nconf_usercount = global.get(\"usercount\");\nconf_codes = global.get(\"codes\");\nconf_name = global.get(\"name\");\nconf_picture = global.get(\"picture\");\ncounter = global.get(\"Counter\") \nmaxretries = global.get(\"MaxRetries\")\n\n\n// timestamp\nvar today = new Date();\nvar timeAsString = today.toLocaleTimeString();\nvar dd = today.getDate();\nvar mm = today.getMonth() + 1; //January is 0!\n\nvar yyyy = today.getFullYear();\nif (dd < 10) {\n  dd = '0' + dd;\n} \nif (mm < 10) {\n  mm = '0' + mm;\n} \nvar today1 = dd + '.' + mm + '.' + yyyy;\n\n// check input code with codes form config file\nkey_check = conf_codes.includes(key_input)\nif (key_check === true) { \n    msg_error = 0;\n    \n    //logging\n    for ( var i = 0; i < conf_codes.length; i++) {\n        if ( conf_codes[i] === key_input ) { usercode = i }\n    }\n    logging.payload.today = today1\n    logging.payload.time = timeAsString;\n    logging.payload.user = conf_name[usercode];\n    logging.payload.state = msg.payload[1]\n    node.send([null,null,logging])\n    \n}\nif (key_check === false){ msg_error = 1;}\nif (key_check === false){ msgs.pin = \"Wrong PIN\";}\n\n// check failed counter or reset to 0    \nif (msg_error === 1 ) {counter += 1; global.set(\"Counter\",counter);}\nif (msg_error === 0 ) {counter = 0; global.set(\"Counter\",counter);}\nmsgs.counter = counter\n\n// initiate lock state\nif ( counter >= maxretries ) { msgs.locked = \"locked\";} \nif ( counter <= maxretries ) { msgs.locked = \"unlocked\";}\n\n \n\n\nif ( msgs.locked === \"locked\") { return [ null, msgs, null, null]; }\nif ( key_check === true ) { return [ msg, null, null, null]; }\nif ( key_check === false ) { return [ null, null, null, msgs]; }\nelse return [ null, null, msgs, null]; \n\n",
+        "func": "// variables\nvar msgs = {};\nvar codes = [];\nvar key_input = msg.payload[0];\nvar msg_error = \"\";\nvar key_check = {};\nvar usercode = [];\n\nlogging = {};\nlogging.payload = {};\n\n// get global variables from config file\nconf_usercount = global.get(\"usercount\");\nconf_codes = global.get(\"codes\");\nconf_name = global.get(\"name\");\nconf_picture = global.get(\"picture\");\ncounter = global.get(\"Counter\") \nmaxretries = global.get(\"MaxRetries\")\n\n\n// timestamp\nvar today = new Date();\nvar timeAsString = today.toLocaleTimeString();\nvar dd = today.getDate();\nvar mm = today.getMonth() + 1; //January is 0!\n\nvar yyyy = today.getFullYear();\nif (dd < 10) {\n  dd = '0' + dd;\n} \nif (mm < 10) {\n  mm = '0' + mm;\n} \nvar today1 = dd + '.' + mm + '.' + yyyy;\n\n// check input code with codes form config file\nkey_check = conf_codes.includes(key_input)\nif (key_check === true) { \n    msg_error = 0;\n    \n    //logging\n    for ( var i = 0; i < conf_codes.length; i++) {\n        if ( conf_codes[i] === key_input ) { usercode = i }\n    }\n    logging.payload.today = today1\n    logging.payload.time = timeAsString;\n    logging.payload.user = conf_name[usercode];\n    logging.payload.state = msg.payload[1]\n    node.send([null,null,logging])\n}\nif (key_check === false){ msg_error = 1;}\nif (key_check === false){ msgs.pin = \"Wrong PIN\";}\n\n// check failed counter or reset to 0    \nif (msg_error === 1 ) {counter += 1; global.set(\"Counter\",counter);}\nif (msg_error === 0 ) {counter = 0; global.set(\"Counter\",counter);}\nmsgs.counter = counter\n\n// initiate lock state\nif ( counter >= maxretries ) { msgs.locked = \"locked\";} \nif ( counter <= maxretries ) { msgs.locked = \"unlocked\";}\n\n \n\n\nif ( msgs.locked === \"locked\") { return [ null, msgs, null, null]; }\nif ( key_check === true ) { return [ msg, null, null, null]; }\nif ( key_check === false ) { return [ null, null, null, msgs]; }\nelse return [ null, null, msgs, null]; \n\n",
         "outputs": 4,
         "noerr": 0,
         "x": 1689,
         "y": 624,
         "wires": [
             [
-                "453b4701.e9d6e8"
+                "4e4f1361.e3d0ac"
             ],
             [
-                "5e3ae2e8.b145bc",
-                "66ab173e.bef97"
+                "dbb1fc27.5973b8",
+                "7296c41b.c189ec"
             ],
             [
-                "ed03ef10.94a508"
+                "8f6aa21.3678c6"
             ],
             [
-                "f090143b.ab0a6"
+                "7484da57.57f74c"
             ]
         ]
     },
     {
-        "id": "b3c89643.78865",
+        "id": "e9492c74.0b2c9",
         "type": "function",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "set state image",
         "func": "imagepath = global.get(\"Imagepath\"); \n\nif (msg.payload === \"armed_home\") { msg.payload = '<img class=\"marginauto\" src=\"' + imagepath + 'armed_home.png\">'; }\nelse if (msg.payload === \"armed_away\") { msg.payload = '<img class=\"marginauto\" src=\"' + imagepath + 'armed_away.png\">'; }\nelse if (msg.payload === \"triggered\") { msg.payload = '<img class=\"blink-image\" src=\"' + imagepath + 'alarm_triggered.png\">';  }\nelse if (msg.payload === \"pending\") { msg.payload = '<img class=\"blink-image\" src=\"' + imagepath + 'pending.png\">'; }\nelse if (msg.payload === \"disarmed\") { msg.payload = '<img class=\"marginauto\" src=\"' + imagepath + 'unarmed.png\">'; }\nelse if (msg.locked === \"locked\") { msg.payload = '<img class=\"marginauto\" src=\"' + imagepath + 'locked_out.png\">'; }\nreturn msg;\n",
         "outputs": 1,
@@ -552,14 +552,14 @@
         "y": 139,
         "wires": [
             [
-                "b1e882eb.8ec86"
+                "ec80a0a6.3060e8"
             ]
         ]
     },
     {
-        "id": "6556efbb.d02378",
+        "id": "448f2826.16287",
         "type": "change",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "\"pending\"",
         "rules": [
             {
@@ -581,14 +581,14 @@
         "y": 359,
         "wires": [
             [
-                "6ba3b0dd.bc15a"
+                "8fd0c4f4.92f63"
             ]
         ]
     },
     {
-        "id": "94edcbc3.c46c98",
+        "id": "12a8be09.f41812",
         "type": "comment",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "Change this to your alarm_control_panel entity name and server ip => ",
         "info": "",
         "x": 291,
@@ -596,9 +596,9 @@
         "wires": []
     },
     {
-        "id": "11d00c96.10b7d3",
+        "id": "ddf2f8b6.35cac8",
         "type": "comment",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "Change this to your alarm_control_panel entity name => ",
         "info": "",
         "x": 240,
@@ -606,9 +606,9 @@
         "wires": []
     },
     {
-        "id": "9ad9428a.a60ab8",
+        "id": "524a251e.70481c",
         "type": "change",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "Active",
         "rules": [
             {
@@ -628,15 +628,15 @@
         "y": 1104,
         "wires": [
             [
-                "5137153f.068d0c"
+                "26b58b3.f0b9274"
             ]
         ]
     },
     {
-        "id": "4d75a773.630648",
+        "id": "d937865a.f93ab8",
         "type": "ui_template",
-        "z": "8488c4ce.382e68",
-        "group": "7e298e0d.985158",
+        "z": "59a537e2.ef62e8",
+        "group": "f5fe553e.fcae78",
         "name": "1",
         "order": 1,
         "width": "2",
@@ -649,15 +649,15 @@
         "y": 444,
         "wires": [
             [
-                "6f283f33.613628"
+                "eceeb7a3.6f2598"
             ]
         ]
     },
     {
-        "id": "fb595c9d.114218",
+        "id": "f62dad4a.82ac08",
         "type": "ui_template",
-        "z": "8488c4ce.382e68",
-        "group": "7e298e0d.985158",
+        "z": "59a537e2.ef62e8",
+        "group": "f5fe553e.fcae78",
         "name": "2",
         "order": 2,
         "width": "2",
@@ -670,15 +670,15 @@
         "y": 484,
         "wires": [
             [
-                "6f283f33.613628"
+                "eceeb7a3.6f2598"
             ]
         ]
     },
     {
-        "id": "bb4c86c8.f8701",
+        "id": "e09f8fb7.d38cb",
         "type": "ui_template",
-        "z": "8488c4ce.382e68",
-        "group": "7e298e0d.985158",
+        "z": "59a537e2.ef62e8",
+        "group": "f5fe553e.fcae78",
         "name": "3",
         "order": 3,
         "width": "2",
@@ -691,15 +691,15 @@
         "y": 524,
         "wires": [
             [
-                "6f283f33.613628"
+                "eceeb7a3.6f2598"
             ]
         ]
     },
     {
-        "id": "ec0570e4.15519",
+        "id": "4e820d5f.d7c7f4",
         "type": "ui_template",
-        "z": "8488c4ce.382e68",
-        "group": "7e298e0d.985158",
+        "z": "59a537e2.ef62e8",
+        "group": "f5fe553e.fcae78",
         "name": "4",
         "order": 5,
         "width": "2",
@@ -712,15 +712,15 @@
         "y": 564,
         "wires": [
             [
-                "6f283f33.613628"
+                "eceeb7a3.6f2598"
             ]
         ]
     },
     {
-        "id": "949d2a8e.d810c",
+        "id": "b06b7f94.f2f128",
         "type": "ui_template",
-        "z": "8488c4ce.382e68",
-        "group": "7e298e0d.985158",
+        "z": "59a537e2.ef62e8",
+        "group": "f5fe553e.fcae78",
         "name": "5",
         "order": 6,
         "width": "2",
@@ -733,15 +733,15 @@
         "y": 604,
         "wires": [
             [
-                "6f283f33.613628"
+                "eceeb7a3.6f2598"
             ]
         ]
     },
     {
-        "id": "3a452f67.1671f8",
+        "id": "10bd942f.0d0694",
         "type": "ui_template",
-        "z": "8488c4ce.382e68",
-        "group": "7e298e0d.985158",
+        "z": "59a537e2.ef62e8",
+        "group": "f5fe553e.fcae78",
         "name": "6",
         "order": 7,
         "width": "2",
@@ -754,15 +754,15 @@
         "y": 644,
         "wires": [
             [
-                "6f283f33.613628"
+                "eceeb7a3.6f2598"
             ]
         ]
     },
     {
-        "id": "e84afff7.f96bf",
+        "id": "32b74787.59074",
         "type": "ui_template",
-        "z": "8488c4ce.382e68",
-        "group": "7e298e0d.985158",
+        "z": "59a537e2.ef62e8",
+        "group": "f5fe553e.fcae78",
         "name": "7",
         "order": 9,
         "width": "2",
@@ -775,15 +775,15 @@
         "y": 684,
         "wires": [
             [
-                "6f283f33.613628"
+                "eceeb7a3.6f2598"
             ]
         ]
     },
     {
-        "id": "3e3dd1f0.cc604e",
+        "id": "69448a70.07b5dc",
         "type": "ui_template",
-        "z": "8488c4ce.382e68",
-        "group": "7e298e0d.985158",
+        "z": "59a537e2.ef62e8",
+        "group": "f5fe553e.fcae78",
         "name": "8",
         "order": 10,
         "width": "2",
@@ -796,15 +796,15 @@
         "y": 724,
         "wires": [
             [
-                "6f283f33.613628"
+                "eceeb7a3.6f2598"
             ]
         ]
     },
     {
-        "id": "50407676.35b3c8",
+        "id": "7b34c9ed.36c428",
         "type": "ui_template",
-        "z": "8488c4ce.382e68",
-        "group": "7e298e0d.985158",
+        "z": "59a537e2.ef62e8",
+        "group": "f5fe553e.fcae78",
         "name": "9",
         "order": 11,
         "width": "2",
@@ -817,15 +817,15 @@
         "y": 764,
         "wires": [
             [
-                "6f283f33.613628"
+                "eceeb7a3.6f2598"
             ]
         ]
     },
     {
-        "id": "192b6e6d.60bc5a",
+        "id": "c79effb8.8e8ff",
         "type": "ui_template",
-        "z": "8488c4ce.382e68",
-        "group": "7e298e0d.985158",
+        "z": "59a537e2.ef62e8",
+        "group": "f5fe553e.fcae78",
         "name": "*",
         "order": 13,
         "width": "2",
@@ -838,15 +838,15 @@
         "y": 804,
         "wires": [
             [
-                "6f283f33.613628"
+                "eceeb7a3.6f2598"
             ]
         ]
     },
     {
-        "id": "117e4a77.0773a6",
+        "id": "43916088.6e2ab8",
         "type": "ui_template",
-        "z": "8488c4ce.382e68",
-        "group": "7e298e0d.985158",
+        "z": "59a537e2.ef62e8",
+        "group": "f5fe553e.fcae78",
         "name": "0",
         "order": 14,
         "width": "2",
@@ -859,15 +859,15 @@
         "y": 844,
         "wires": [
             [
-                "6f283f33.613628"
+                "eceeb7a3.6f2598"
             ]
         ]
     },
     {
-        "id": "aaedd5de.2acb3",
+        "id": "1b3d14c7.2fbb2b",
         "type": "ui_template",
-        "z": "8488c4ce.382e68",
-        "group": "7e298e0d.985158",
+        "z": "59a537e2.ef62e8",
+        "group": "f5fe553e.fcae78",
         "name": "Home",
         "order": 4,
         "width": "2",
@@ -880,16 +880,16 @@
         "y": 884,
         "wires": [
             [
-                "65173114.eb6978",
-                "3d3b375.cd8cdc8"
+                "dcc92227.ca9398",
+                "fcfc4a52.57bbd8"
             ]
         ]
     },
     {
-        "id": "6032f114.fb0ec8",
+        "id": "cb5c514.98f05b",
         "type": "ui_template",
-        "z": "8488c4ce.382e68",
-        "group": "7e298e0d.985158",
+        "z": "59a537e2.ef62e8",
+        "group": "f5fe553e.fcae78",
         "name": "Away",
         "order": 8,
         "width": "2",
@@ -902,16 +902,16 @@
         "y": 924,
         "wires": [
             [
-                "65173114.eb6978",
-                "3d3b375.cd8cdc8"
+                "dcc92227.ca9398",
+                "fcfc4a52.57bbd8"
             ]
         ]
     },
     {
-        "id": "c8bd030c.ad5a",
+        "id": "5246cf9f.e2da3",
         "type": "ui_template",
-        "z": "8488c4ce.382e68",
-        "group": "7e298e0d.985158",
+        "z": "59a537e2.ef62e8",
+        "group": "f5fe553e.fcae78",
         "name": "DISARM",
         "order": 12,
         "width": "2",
@@ -924,16 +924,16 @@
         "y": 964,
         "wires": [
             [
-                "65173114.eb6978",
-                "3d3b375.cd8cdc8"
+                "dcc92227.ca9398",
+                "fcfc4a52.57bbd8"
             ]
         ]
     },
     {
-        "id": "50ff2da6.32afa4",
+        "id": "5bb1a4f8.d55a2c",
         "type": "ui_template",
-        "z": "8488c4ce.382e68",
-        "group": "7e298e0d.985158",
+        "z": "59a537e2.ef62e8",
+        "group": "f5fe553e.fcae78",
         "name": "C",
         "order": 15,
         "width": "2",
@@ -946,15 +946,15 @@
         "y": 1004,
         "wires": [
             [
-                "65173114.eb6978",
-                "3d3b375.cd8cdc8"
+                "dcc92227.ca9398",
+                "fcfc4a52.57bbd8"
             ]
         ]
     },
     {
-        "id": "65173114.eb6978",
+        "id": "dcc92227.ca9398",
         "type": "function",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "Message Complete",
         "func": "msg.payload=\"\";\nmsg.complete=true;\nreturn msg;",
         "outputs": 1,
@@ -963,14 +963,14 @@
         "y": 904,
         "wires": [
             [
-                "6f283f33.613628"
+                "eceeb7a3.6f2598"
             ]
         ]
     },
     {
-        "id": "3d3b375.cd8cdc8",
+        "id": "fcfc4a52.57bbd8",
         "type": "delay",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "500ms",
         "pauseType": "delay",
         "timeout": "500",
@@ -986,28 +986,28 @@
         "y": 824,
         "wires": [
             [
-                "92a5953d.b9f2f8"
+                "aa4b85ef.8d4a8"
             ]
         ]
     },
     {
-        "id": "1876ce8d.0ba4e9",
+        "id": "f447b8b3.8a0d1",
         "type": "yaml",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "property": "payload",
         "name": "",
         "x": 537,
         "y": 24,
         "wires": [
             [
-                "86296b0a.c81858"
+                "544f5b20.2b5464"
             ]
         ]
     },
     {
-        "id": "acd376af.62eb68",
+        "id": "b4afa73f.5f0008",
         "type": "inject",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "Startup",
         "topic": "",
         "payload": "",
@@ -1020,14 +1020,14 @@
         "y": 24,
         "wires": [
             [
-                "d8567e9b.b7dca"
+                "69866030.0bb5c8"
             ]
         ]
     },
     {
-        "id": "d8567e9b.b7dca",
+        "id": "69866030.0bb5c8",
         "type": "file in",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "",
         "filename": "/config/alarm.yaml",
         "format": "utf8",
@@ -1036,14 +1036,14 @@
         "y": 24,
         "wires": [
             [
-                "1876ce8d.0ba4e9"
+                "f447b8b3.8a0d1"
             ]
         ]
     },
     {
-        "id": "86296b0a.c81858",
+        "id": "544f5b20.2b5464",
         "type": "function",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "get settings from yaml",
         "func": "\n// reset global variables\nglobal.set(\"usercount\",\"\")\nglobal.set(\"codes\",\"\")\nglobal.set(\"name\",\"\")\nglobal.set(\"picture\",\"\")\nglobal.set(\"LockTime\",\"\") \nglobal.set(\"MaxRetries\",\"\")\n\nvar msgs = [];\nvar codes = [];\nvar name = [];\nvar picture = [];\nvar lockout = msg.payload.passcode_attempts_timeout;\nvar pass_attempts = msg.payload.passcode_attempts\nvar count = 0;\nfor (var i = 0; i< msg.payload.users.length; i++) {\n  if ( msg.payload.users[i].enabled === true) {\n    codes.push(msg.payload.users[i].code);\n    name.push(msg.payload.users[i].name);\n    picture.push(msg.payload.users[i].picture);\n    count +=1\n  }\n}\nglobal.set(\"usercount\",count)\nglobal.set(\"codes\",codes)\nglobal.set(\"name\",name)\nglobal.set(\"picture\",picture)\nglobal.set(\"LockTime\",lockout) \nglobal.set(\"MaxRetries\",pass_attempts)\nmsgs.push({payload: codes});\nreturn [msgs]\n\n",
         "outputs": 1,
@@ -1052,14 +1052,14 @@
         "y": 24,
         "wires": [
             [
-                "30645b60.796844"
+                "1524ea41.46b1fe"
             ]
         ]
     },
     {
-        "id": "5b7038b4.cc4bc",
+        "id": "40f25954.9e7978",
         "type": "function",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "Unlock",
         "func": "if ( msg.payload === \"unlocked\" ) {counter = 0; global.set(\"Counter\",counter);}\nif ( msg.payload === \"unlocked\" ) { \n    msg.counter = \"\";\n    msg.locked  = \"\";\n    msg.payload = \"\";\n    return msg; }\nif ( msg.payload !== \"unlocked\" ) { return null; }\n",
         "outputs": 1,
@@ -1068,14 +1068,14 @@
         "y": 704,
         "wires": [
             [
-                "27be1b4e.d3d89c"
+                "ddb5cf20.9e1548"
             ]
         ]
     },
     {
-        "id": "5e3ae2e8.b145bc",
+        "id": "dbb1fc27.5973b8",
         "type": "function",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "Countdown",
         "func": "var countdown = global.get(\"LockTime\"); \n\n(function myLoop (i) {          \n   setTimeout(function () {   \n          msg.enabled = \"Panel Locked for: \" + i + \" Seconds\"\n          node.send(msg)\n      if (--i) myLoop(i);\n      \n      if ( i === 0) {\n            msg.payload = \"unlocked\"\n            node.send(msg)          \n      }\n      \n   }, 1000)\n})(countdown); \n\n \n",
         "outputs": 1,
@@ -1084,90 +1084,90 @@
         "y": 664,
         "wires": [
             [
-                "5b7038b4.cc4bc",
-                "300916c2.f885d2"
+                "40f25954.9e7978",
+                "ca7b27ed.1c57"
             ]
         ]
     },
     {
-        "id": "66ab173e.bef97",
+        "id": "7296c41b.c189ec",
         "type": "link out",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "",
         "links": [
-            "83753d86.ce6dc",
-            "7e237624.af0718"
+            "a5cbf0ee.2c1e",
+            "61ad0949.311658"
         ],
         "x": 1864,
         "y": 623,
         "wires": []
     },
     {
-        "id": "83753d86.ce6dc",
+        "id": "a5cbf0ee.2c1e",
         "type": "link in",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "locked",
         "links": [
-            "44f69b00.bf9854",
-            "66ab173e.bef97"
+            "95e19545.c0c4e8",
+            "7296c41b.c189ec"
         ],
         "x": 315,
         "y": 679,
         "wires": [
             [
-                "406cac4a.819abc"
+                "724795b1.fadbec"
             ]
         ]
     },
     {
-        "id": "7e237624.af0718",
+        "id": "61ad0949.311658",
         "type": "link in",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "reinject image",
         "links": [
-            "66ab173e.bef97",
-            "44f69b00.bf9854"
+            "7296c41b.c189ec",
+            "95e19545.c0c4e8"
         ],
         "x": 675,
         "y": 139,
         "wires": [
             [
-                "b3c89643.78865"
+                "e9492c74.0b2c9"
             ]
         ]
     },
     {
-        "id": "3d428aa4.4d652e",
+        "id": "46451268.a057bc",
         "type": "link in",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "Panel Status",
         "links": [
-            "300916c2.f885d2"
+            "ca7b27ed.1c57"
         ],
         "x": 895,
         "y": 1160,
         "wires": [
             [
-                "5137153f.068d0c"
+                "26b58b3.f0b9274"
             ]
         ]
     },
     {
-        "id": "300916c2.f885d2",
+        "id": "ca7b27ed.1c57",
         "type": "link out",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "",
         "links": [
-            "3d428aa4.4d652e"
+            "46451268.a057bc"
         ],
         "x": 2008,
         "y": 665,
         "wires": []
     },
     {
-        "id": "427890f2.05b14",
+        "id": "d08a4b0a.b97188",
         "type": "function",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "Global Settings",
         "func": "\n\n// Global Settings\nglobal.set(\"Counter\",0) \nglobal.set(\"Imagepath\",\"http://192.168.32.203:8123/local/images/\")\nreturn msg;\n\n",
         "outputs": 1,
@@ -1179,9 +1179,9 @@
         ]
     },
     {
-        "id": "b144abdf.afd428",
+        "id": "10cc099d.20854e",
         "type": "inject",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "Startup",
         "topic": "",
         "payload": "",
@@ -1194,16 +1194,16 @@
         "y": 68,
         "wires": [
             [
-                "427890f2.05b14"
+                "d08a4b0a.b97188"
             ]
         ]
     },
     {
-        "id": "27be1b4e.d3d89c",
+        "id": "ddb5cf20.9e1548",
         "type": "api-current-state",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "Alarm State",
-        "server": "7ef0ac76.c23934",
+        "server": "14e7f26a.9e4c3e",
         "outputs": 1,
         "halt_if": "",
         "halt_if_type": "str",
@@ -1219,27 +1219,27 @@
         "y": 744,
         "wires": [
             [
-                "44f69b00.bf9854"
+                "95e19545.c0c4e8"
             ]
         ]
     },
     {
-        "id": "44f69b00.bf9854",
+        "id": "95e19545.c0c4e8",
         "type": "link out",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "",
         "links": [
-            "83753d86.ce6dc",
-            "7e237624.af0718"
+            "a5cbf0ee.2c1e",
+            "61ad0949.311658"
         ],
         "x": 2064,
         "y": 744,
         "wires": []
     },
     {
-        "id": "f5456965.02322",
+        "id": "48eb2cc6.f1c1cc",
         "type": "comment",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "Change this to your alarm_control_panel entity name => ",
         "info": "",
         "x": 1639,
@@ -1247,9 +1247,9 @@
         "wires": []
     },
     {
-        "id": "30645b60.796844",
+        "id": "1524ea41.46b1fe",
         "type": "debug",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "",
         "active": false,
         "tosidebar": true,
@@ -1262,39 +1262,25 @@
         "wires": []
     },
     {
-        "id": "ed03ef10.94a508",
-        "type": "yaml",
-        "z": "8488c4ce.382e68",
-        "property": "payload",
-        "name": "",
-        "x": 1850,
-        "y": 848,
-        "wires": [
-            [
-                "ef293074.0e18a8"
-            ]
-        ]
-    },
-    {
-        "id": "ef293074.0e18a8",
+        "id": "ed5ac53f.d1cce",
         "type": "file",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "",
-        "filename": "/config/alarm_logging.yaml",
+        "filename": "/config/alarm_logging.json",
         "appendNewline": true,
         "createDir": false,
         "overwriteFile": "false",
         "encoding": "none",
-        "x": 2030,
-        "y": 848,
+        "x": 2068,
+        "y": 862,
         "wires": [
             []
         ]
     },
     {
-        "id": "653900b1.3ea958",
+        "id": "a71c9a45.68635",
         "type": "comment",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "Global UI Settings",
         "info": "",
         "x": 1620,
@@ -1302,9 +1288,9 @@
         "wires": []
     },
     {
-        "id": "2f25c394.f7102c",
+        "id": "5940e899.d8cbd8",
         "type": "comment",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "Logging to file",
         "info": "",
         "x": 1860,
@@ -1312,9 +1298,9 @@
         "wires": []
     },
     {
-        "id": "11c16238.be60e6",
+        "id": "90867aba.75316",
         "type": "comment",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "<== Change the MQTT details to match Hassio",
         "info": "",
         "x": 2210,
@@ -1322,9 +1308,9 @@
         "wires": []
     },
     {
-        "id": "b084de46.3780c",
+        "id": "b5cc441.81169b8",
         "type": "comment",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "<== Change path to your hassio address ",
         "info": "",
         "x": 661,
@@ -1332,9 +1318,9 @@
         "wires": []
     },
     {
-        "id": "abf5a12f.ccfbf8",
+        "id": "297262d1.ef0fe6",
         "type": "ui_ui_control",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "",
         "x": 780,
         "y": 1257,
@@ -1343,88 +1329,44 @@
         ]
     },
     {
-        "id": "22187497.d05604",
+        "id": "bf32e828.6957e",
         "type": "file in",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "",
         "filename": "/config/alarm_logging.json",
         "format": "lines",
-        "sendError": true,
-        "x": 600,
-        "y": 1297,
+        "sendError": false,
+        "x": 446,
+        "y": 1334,
         "wires": [
             [
-                "1f405732.7458b1"
+                "a63a0709.f99228"
             ]
         ]
     },
     {
-        "id": "1f405732.7458b1",
-        "type": "json",
-        "z": "8488c4ce.382e68",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 790,
-        "y": 1297,
-        "wires": [
-            [
-                "ca47d8da.1d4d58"
-            ]
-        ]
-    },
-    {
-        "id": "ca47d8da.1d4d58",
-        "type": "join",
-        "z": "8488c4ce.382e68",
-        "name": "",
-        "mode": "custom",
-        "build": "array",
-        "property": "payload",
-        "propertyType": "msg",
-        "key": "topic",
-        "joiner": ",",
-        "joinerType": "str",
-        "accumulate": false,
-        "timeout": "1",
-        "count": "",
-        "reduceRight": false,
-        "reduceExp": "",
-        "reduceInit": "",
-        "reduceInitType": "num",
-        "reduceFixup": "",
-        "x": 910,
-        "y": 1297,
-        "wires": [
-            [
-                "3bd9d5f3.9bf422"
-            ]
-        ]
-    },
-    {
-        "id": "25921260.8c0e1e",
+        "id": "e057b426.a5857",
         "type": "ui_template",
-        "z": "8488c4ce.382e68",
-        "group": "14e2f2a4.cfdb25",
+        "z": "59a537e2.ef62e8",
+        "group": "d6065a37.d74c8",
         "name": "",
         "order": 1,
         "width": 0,
         "height": 0,
-        "format": "<style>\ntable {\n  width: 100%;\n}\n\nth {\n  background-color: #2980B9;\n  color: white;\n  height: 50px;\n}\n\ntr {\n  height: 40px;\n}\n\ntr:nth-child(even) {background-color: #f2f2f2;}\n\n</style>\n<table id=\"table\" border=\"0\">\n        <tr>\n            <th>Date</th>\n            <th>Time</th>\n            <th>User</th>\n            <th>State</th>\n        </tr>\n<tbody>\n\n<tr ng-repeat=\"row in msg.payload\">\n    <td ng-repeat=\"item in row\" >{{item}}</td>\n</tr>\n</tbody>\n</table>",
+        "format": "<style>\n    {{msg.style}}\n</style>\n\n<table>\n\n <tr>\n <th>Date</th> \n <th>Time</th>\n <th>User</th>\n <th>Action</th>\n \n </tr>\n <tbody>\n <tr ng-repeat=\"row in msg.payload\" >\n <td ng-repeat=\"item in row\">{{item}}</td>\n \n </tr>\n </tbody>\n</table>",
         "storeOutMessages": false,
         "fwdInMessages": true,
         "templateScope": "local",
-        "x": 1180,
-        "y": 1297,
+        "x": 1066,
+        "y": 1334,
         "wires": [
             []
         ]
     },
     {
-        "id": "c9b1c324.1368e",
+        "id": "19beff55.80fc59",
         "type": "delay",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "",
         "pauseType": "delay",
         "timeout": "500",
@@ -1440,15 +1382,15 @@
         "y": 1257,
         "wires": [
             [
-                "abf5a12f.ccfbf8"
+                "297262d1.ef0fe6"
             ]
         ]
     },
     {
-        "id": "f4a8fa95.1dbfd",
+        "id": "6a696599.78b22c",
         "type": "ui_template",
-        "z": "8488c4ce.382e68",
-        "group": "815f23e1.e0556",
+        "z": "59a537e2.ef62e8",
+        "group": "2961e3b4.04b5ec",
         "name": "KeyPad",
         "order": 6,
         "width": "2",
@@ -1461,15 +1403,15 @@
         "y": 1177,
         "wires": [
             [
-                "30b3e68f.758672"
+                "3f567110.885596"
             ]
         ]
     },
     {
-        "id": "d1103bb7.2a88a",
+        "id": "e7b52678.abc1b8",
         "type": "ui_template",
-        "z": "8488c4ce.382e68",
-        "group": "815f23e1.e0556",
+        "z": "59a537e2.ef62e8",
+        "group": "2961e3b4.04b5ec",
         "name": "Log",
         "order": 7,
         "width": "2",
@@ -1482,15 +1424,15 @@
         "y": 1217,
         "wires": [
             [
-                "30b3e68f.758672",
-                "22187497.d05604"
+                "3f567110.885596",
+                "bf32e828.6957e"
             ]
         ]
     },
     {
-        "id": "30b3e68f.758672",
+        "id": "3f567110.885596",
         "type": "function",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "",
         "func": "if ( msg.payload === \"KeyPad\" )\n        msg.payload = {\n           \"group\": \n              { \n                 \"hide\": [\"Alarm_Panel_Log\"],\n                 \"show\": [\"Alarm_Panel_Alarm_Panel\"],\n                 \"focus\": true\n                }\n        }\n\nif ( msg.payload === \"Log\" )\n        msg.payload = {\n           \"group\": \n              { \n                 \"hide\": [\"Alarm_Panel_Alarm_Panel\"],\n                 \"show\": [\"Alarm_Panel_Log\"],\n                 \"focus\": true\n                }\n        }\n\nreturn msg;\n\n\n",
         "outputs": 1,
@@ -1499,15 +1441,15 @@
         "y": 1217,
         "wires": [
             [
-                "c9b1c324.1368e"
+                "19beff55.80fc59"
             ]
         ]
     },
     {
-        "id": "44895d21.b3c45c",
+        "id": "99236bfb.70b2b8",
         "type": "ui_template",
-        "z": "8488c4ce.382e68",
-        "group": "815f23e1.e0556",
+        "z": "59a537e2.ef62e8",
+        "group": "2961e3b4.04b5ec",
         "name": "Placeholder left",
         "order": 5,
         "width": "2",
@@ -1523,9 +1465,9 @@
         ]
     },
     {
-        "id": "4e727509.c37d54",
+        "id": "d1f9a5bf.45cea",
         "type": "inject",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "",
         "topic": "",
         "payload": "",
@@ -1534,18 +1476,18 @@
         "crontab": "",
         "once": true,
         "onceDelay": "5",
-        "x": 190,
-        "y": 1297,
+        "x": 199,
+        "y": 1334,
         "wires": [
             [
-                "22187497.d05604"
+                "bf32e828.6957e"
             ]
         ]
     },
     {
-        "id": "7b318be6.94ed8c",
+        "id": "395cb29e.cc97e6",
         "type": "inject",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "",
         "topic": "",
         "payload": "",
@@ -1558,41 +1500,41 @@
         "y": 1177,
         "wires": [
             [
-                "f4a8fa95.1dbfd"
+                "6a696599.78b22c"
             ]
         ]
     },
     {
-        "id": "bb186d2b.3983a",
+        "id": "715faa1.0ab4e54",
         "type": "comment",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "KeyPad / Log Buttons UI",
         "info": "",
-        "x": 200,
-        "y": 1060,
+        "x": 211,
+        "y": 1087,
         "wires": []
     },
     {
-        "id": "3bd9d5f3.9bf422",
+        "id": "7b30932a.2b285c",
         "type": "function",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "",
-        "func": "arr = msg.payload\nlogs = arr.slice(Math.max(arr.length - 10, 1)) \n\n    for ( var i = 0; i < logs.length; i++) {\n        if ( logs[i][3] === \"DISARM\" ) { logs[i][3] = \"Deaktiviert\" }\n        if ( logs[i][3] === \"ARM_HOME\" ) { logs[i][3] = \"Zu Hause\" }\n        if ( logs[i][3] === \"ARM_AWAY\" ) { logs[i][3] = \"Unterwegs\" }\n    }\n\nmsg.payload = logs\nreturn msg;",
+        "func": "arr = msg.payload\n\nfor ( var i = 0; i < arr.length; i++) {\n\n    if ( msg.payload[i].state === \"DISARM\") { msg.payload[i].state = \"Disarmed\"}\n    if ( msg.payload[i].state === \"ARMED\") { msg.payload[i].state = \"Armed\"}\n    if ( msg.payload[i].state === \"ARM_HOME\") { msg.payload[i].state = \"Armed Stay\"}\n    if ( msg.payload[i].state === \"ARM_AWAY\") { msg.payload[i].state = \"Armed Away\"}\n}\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
-        "x": 1030,
-        "y": 1297,
+        "x": 847,
+        "y": 1386,
         "wires": [
             [
-                "25921260.8c0e1e"
+                "fd585fd2.33bdc"
             ]
         ]
     },
     {
-        "id": "c0a7132a.14b3b",
+        "id": "4427bc83.15b5b4",
         "type": "ui_template",
-        "z": "8488c4ce.382e68",
-        "group": "7e298e0d.985158",
+        "z": "59a537e2.ef62e8",
+        "group": "f5fe553e.fcae78",
         "name": "UI Stuff Alarm Panel",
         "order": 16,
         "width": "0",
@@ -1608,10 +1550,10 @@
         ]
     },
     {
-        "id": "54d3e25d.efc364",
+        "id": "413f149c.678e84",
         "type": "ui_template",
-        "z": "8488c4ce.382e68",
-        "group": "643faa2e.065374",
+        "z": "59a537e2.ef62e8",
+        "group": "411ac8bf.2d5118",
         "name": "Clock Toolbar",
         "order": 1,
         "width": "0",
@@ -1627,10 +1569,10 @@
         ]
     },
     {
-        "id": "6f28e3f4.06674c",
+        "id": "43ca291c.2ff028",
         "type": "ui_template",
-        "z": "8488c4ce.382e68",
-        "group": "815f23e1.e0556",
+        "z": "59a537e2.ef62e8",
+        "group": "2961e3b4.04b5ec",
         "name": "UI Stuff Alarm Panel Left",
         "order": 8,
         "width": "0",
@@ -1646,41 +1588,41 @@
         ]
     },
     {
-        "id": "1c07ab57.a10075",
+        "id": "30802dfd.54b792",
         "type": "link in",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "reinject state",
         "links": [
-            "6bb276e9.e041b"
+            "616d042c.6476f4"
         ],
         "x": 455,
         "y": 460,
         "wires": [
             [
-                "9f9fff32.5e3db"
+                "b631159e.e2e59"
             ]
         ]
     },
     {
-        "id": "2c1c6e2d.133712",
+        "id": "7abd146b.f2a5b4",
         "type": "link in",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "wrong pin",
         "links": [
-            "f090143b.ab0a6"
+            "7484da57.57f74c"
         ],
         "x": 855,
         "y": 400,
         "wires": [
             [
-                "92089a5.95bf9e8"
+                "4b21ceb3.5b9c78"
             ]
         ]
     },
     {
-        "id": "92089a5.95bf9e8",
+        "id": "4b21ceb3.5b9c78",
         "type": "change",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "\"pin\"",
         "rules": [
             {
@@ -1700,15 +1642,15 @@
         "y": 400,
         "wires": [
             [
-                "c8bd9775.8f4858",
-                "6ba3b0dd.bc15a"
+                "3d3fc50.ca63e3c",
+                "8fd0c4f4.92f63"
             ]
         ]
     },
     {
-        "id": "c8bd9775.8f4858",
+        "id": "3d3fc50.ca63e3c",
         "type": "delay",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "",
         "pauseType": "delay",
         "timeout": "8",
@@ -1724,54 +1666,148 @@
         "y": 400,
         "wires": [
             [
-                "6bb276e9.e041b"
+                "616d042c.6476f4"
             ]
         ]
     },
     {
-        "id": "6bb276e9.e041b",
+        "id": "616d042c.6476f4",
         "type": "link out",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "reinject state",
         "links": [
-            "1c07ab57.a10075"
+            "30802dfd.54b792"
         ],
         "x": 1235,
         "y": 400,
         "wires": []
     },
     {
-        "id": "f090143b.ab0a6",
+        "id": "7484da57.57f74c",
         "type": "link out",
-        "z": "8488c4ce.382e68",
+        "z": "59a537e2.ef62e8",
         "name": "wrong pin",
         "links": [
-            "2c1c6e2d.133712"
+            "7abd146b.f2a5b4"
         ],
         "x": 1735,
         "y": 680,
         "wires": []
     },
     {
-        "id": "815f23e1.e0556",
+        "id": "f29ee62f.6509d",
+        "type": "join",
+        "z": "59a537e2.ef62e8",
+        "name": "",
+        "mode": "custom",
+        "build": "array",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": ",",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "1",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 762,
+        "y": 1334,
+        "wires": [
+            [
+                "7b30932a.2b285c"
+            ]
+        ]
+    },
+    {
+        "id": "8f6aa21.3678c6",
+        "type": "json",
+        "z": "59a537e2.ef62e8",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 1845,
+        "y": 862,
+        "wires": [
+            [
+                "ed5ac53f.d1cce"
+            ]
+        ]
+    },
+    {
+        "id": "a63a0709.f99228",
+        "type": "json",
+        "z": "59a537e2.ef62e8",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": true,
+        "x": 641,
+        "y": 1334,
+        "wires": [
+            [
+                "f29ee62f.6509d"
+            ]
+        ]
+    },
+    {
+        "id": "fd585fd2.33bdc",
+        "type": "template",
+        "z": "59a537e2.ef62e8",
+        "name": "css",
+        "field": "style",
+        "fieldType": "msg",
+        "format": "css",
+        "syntax": "mustache",
+        "template": "table {\n  width: 100%;\n}\n\nth {\n  background-color: #2980B9;\n  color: white;\n  height: 60px;\n}\n\ntr {\n  height: 40px;\n}\n\ntr:nth-child(even) {background-color: #f2f2f2;}\n\n",
+        "output": "str",
+        "x": 930,
+        "y": 1334,
+        "wires": [
+            [
+                "e057b426.a5857"
+            ]
+        ]
+    },
+    {
+        "id": "2961e3b4.04b5ec",
         "type": "ui_group",
         "z": "",
         "name": "Alarm Panel Left",
-        "tab": "dcfa25c2.2fb9a8",
+        "tab": "4e1f211f.6761c",
         "order": 2,
         "disp": false,
         "width": "8",
         "collapse": false
     },
     {
-        "id": "7ef0ac76.c23934",
+        "id": "c384f8e0.a1a8e8",
         "type": "server",
         "z": "",
         "name": "Home Assistant",
-        "legacy": false
+        "legacy": false,
+        "hassio": true,
+        "rejectUnauthorizedCerts": true,
+        "ha_boolean": "y|yes|true|on|home|open",
+        "connectionDelay": true
     },
     {
-        "id": "1c2a2feb.1246b",
+        "id": "14e7f26a.9e4c3e",
+        "type": "server",
+        "z": "",
+        "name": "Home Assistant",
+        "legacy": false,
+        "hassio": true,
+        "rejectUnauthorizedCerts": true,
+        "ha_boolean": "y|yes|true|on|home|open",
+        "connectionDelay": true
+    },
+    {
+        "id": "151b6ae5.bd61b5",
         "type": "mqtt-broker",
         "z": "",
         "name": "",
@@ -1793,40 +1829,40 @@
         "willPayload": ""
     },
     {
-        "id": "7e298e0d.985158",
+        "id": "f5fe553e.fcae78",
         "type": "ui_group",
         "z": "",
         "name": "Alarm Panel",
-        "tab": "dcfa25c2.2fb9a8",
+        "tab": "4e1f211f.6761c",
         "order": 3,
         "disp": false,
         "width": "8",
         "collapse": false
     },
     {
-        "id": "14e2f2a4.cfdb25",
+        "id": "d6065a37.d74c8",
         "type": "ui_group",
         "z": "",
         "name": "Log",
-        "tab": "dcfa25c2.2fb9a8",
+        "tab": "4e1f211f.6761c",
         "order": 4,
         "disp": false,
         "width": "8",
         "collapse": false
     },
     {
-        "id": "643faa2e.065374",
+        "id": "411ac8bf.2d5118",
         "type": "ui_group",
         "z": "",
         "name": "hidden_group",
-        "tab": "dcfa25c2.2fb9a8",
+        "tab": "4e1f211f.6761c",
         "order": 1,
         "disp": false,
         "width": "6",
         "collapse": false
     },
     {
-        "id": "dcfa25c2.2fb9a8",
+        "id": "4e1f211f.6761c",
         "type": "ui_tab",
         "z": "",
         "name": "Alarm Panel",
