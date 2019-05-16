@@ -1515,18 +1515,18 @@
         "wires": []
     },
     {
-        "id": "7b30932a.2b285c",
+        "id": "b6af7b9f.4520d",
         "type": "function",
-        "z": "59a537e2.ef62e8",
+        "z": "16aec762.071a71",
         "name": "",
-        "func": "arr = msg.payload\n\nfor ( var i = 0; i < arr.length; i++) {\n\n    if ( msg.payload[i].state === \"DISARM\") { msg.payload[i].state = \"Disarmed\"}\n    if ( msg.payload[i].state === \"ARMED\") { msg.payload[i].state = \"Armed\"}\n    if ( msg.payload[i].state === \"ARM_HOME\") { msg.payload[i].state = \"Armed Stay\"}\n    if ( msg.payload[i].state === \"ARM_AWAY\") { msg.payload[i].state = \"Armed Away\"}\n}\nreturn msg;\n",
+        "func": "arr = msg.payload\nlogs = arr.slice(Math.max(arr.length - 10, 1)) \n\nfor ( var i = 0; i < arr.length; i++) {\n\n    if ( msg.payload[i].state === \"DISARM\") { msg.payload[i].state = \"Disarmed\"}\n    if ( msg.payload[i].state === \"ARMED\") { msg.payload[i].state = \"Armed\"}\n    if ( msg.payload[i].state === \"ARM_HOME\") { msg.payload[i].state = \"Armed Stay\"}\n    if ( msg.payload[i].state === \"ARM_AWAY\") { msg.payload[i].state = \"Armed Away\"}\n}\nmsg.payload = logs\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
-        "x": 847,
-        "y": 1386,
+        "x": 890,
+        "y": 1334,
         "wires": [
             [
-                "fd585fd2.33bdc"
+                "1ceb8c2.9049174"
             ]
         ]
     },
