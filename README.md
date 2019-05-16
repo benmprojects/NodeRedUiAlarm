@@ -13,4 +13,5 @@ TO allow Node Red UI alarm to talk to Yet another Alarm Panel you will need to t
     Click install on node-red-dashboard.
 3.  Then from the hamburger menu click import then clipboard copy then paste the code from alarmpanel.json into the box.
 4.  From there you will need to make a couple of changes which I have added notes to in the flow.
-5.  Last thing to do is copy the images to /config/www/images/
+5.  Copy alarm_logging.json to /config/
+6.  Last thing to do is copy the images to /config/www/images/
